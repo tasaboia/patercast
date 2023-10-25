@@ -106,7 +106,7 @@ export default function Home() {
                     <div className="mb-6 lg:mb-0 lg:mt-32 lg:-mr-10">
                       <p className="lg:transform lg:rotate-90 tracking-widest text-lg text-white uppercase">
                         {/* SEE&nbsp;YOUR&nbsp;GROWTH */}
-                        FRASE&nbsp;AQUI&nbsp;
+                        FRASE&nbsp;AQUI&nbsp;3PALAVRAS
                         {/* PATERCAST */}
                       </p>
                     </div>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion, useScroll } from "framer-motion";
 const meta = {
@@ -12,6 +12,32 @@ const meta = {
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://open.spotify.com/embed/iframe-api/v1";
+
+    document.body.appendChild(script);
+    script.addEventListener("load", () => {
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById("embed-iframe");
+        const options = {
+          width: "100%",
+          height: "160",
+          uri: "spotify:episode:6wKAdMbYr6ng26Bb22ODfB?si=a1ce1cf9ff4e4ebd",
+          // https://open.spotify.com/episode/6wKAdMbYr6ng26Bb22ODfB?si=a1ce1cf9ff4e4ebd
+        };
+        const callback = (EmbedController) => {
+          document.querySelectorAll(".episode").forEach((episode) => {
+            episode.addEventListener("click", () => {
+              EmbedController.loadUri(episode.dataset.spotifyId);
+            });
+          });
+        };
+        IFrameAPI.createController(element, options, callback);
+      };
+    });
+  }, []);
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -493,18 +519,11 @@ export default function Home() {
               </div>
               <div className="lg:flex justify-center mb-16 mx-auto pb-6 border-b border-gray-50">
                 <button className="w-full md:w-auto px-8 py-4 text-lg font-bold shadow rounded-lg">
-                  Strategy
-                </button>
-                <button className="w-full md:w-auto px-8 py-4 text-lg rounded-lg">
-                  Organic
-                </button>
-                <button className="w-full md:w-auto px-8 py-4 text-lg rounded-lg">
-                  Performance
-                </button>
-                <button className="w-full md:w-auto px-8 py-4 text-lg rounded-lg">
-                  Websites and apps
+                  Episódios
                 </button>
               </div>
+              <div id="embed-iframe"></div>
+
               <div className="flex flex-wrap mb-12 lg:mb-16 -m-6">
                 <div className="w-full md:w-1/2 p-6">
                   <div className="flex flex-wrap -m-6">

@@ -3,6 +3,9 @@ import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion, useScroll } from "framer-motion";
 import PosdcastItem from "./_components/PodcastList";
+import NavBar from "./_components/NavBar";
+import Hero from "./_components/Hero";
+import About from "./_components/About";
 const meta = {
   title: "",
   meta: [],
@@ -27,10 +30,10 @@ export default function Home() {
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
-      <>
+      <div className=" w-full overflow-x-hidden">
         {" "}
         <motion.div
-          className="fixed top-0 left-0 right-0 h-2 bg-secondary-500"
+          className="fixed top-0 left-0 right-0 h-2 bg-secondary-500  w-[100vw]"
           style={{
             scaleX: scrollYProgress,
             position: "fixed",
@@ -38,356 +41,31 @@ export default function Home() {
             left: 0,
             right: 0,
             height: "10px",
-            // background: "red",
             transformOrigin: "0%",
             zIndex: 9999,
           }}
         />
-        <section className="relative pb-20 bg-primary-500 overflow-hidden">
-          <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-between">
-            <div className="w-28">
-              <img src="/assets/logo.png" alt="" />
-            </div>
-            <div className="flex justify-between items-center">
-              <div className="lg:hidden">
-                <button className="navbar-burger flex items-center p-3 rounded">
-                  <svg
-                    className="text-white block h-4 w-4"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                  >
-                    <title>Mobile menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                  </svg>
-                </button>
-              </div>
-              {/* <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:w-auto lg:space-x-10">
-                <li></li>
-                <li>
-                  <a
-                    className="text-white font-semibold hover:text-blue-50"
-                    href="#"
-                  >
-                    Company
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-white font-semibold hover:text-blue-50"
-                    href="#"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-white font-semibold hover:text-blue-50"
-                    href="#"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-              </ul> */}
-              <div className="hidden lg:block">
-                {/* <a
-                  className="inline-block px-8 text-white hover:text-blue-50 font-semibold"
-                  href="#"
-                >
-                  Get estimate
-                </a> */}
-                <a
-                  className="inline-block py-3 px-8 text-sm text-white hover:text-blue-50 uppercase font-semibold border-2 border-white"
-                  href="#"
-                >
-                  Contato
-                </a>
-              </div>
-            </div>
-          </nav>
-          <div className="relative pt-12 md:pt-0">
-            {/* <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center">
-              <h2 className="stroke opacity-75">VISION</h2>
-            </div> */}
-            <div className="container px-4 mx-auto">
-              <div className="relative flex flex-wrap items-center -mx-4">
-                <div className="relative z-10 w-full md:w-1/2 px-4 lg:py-32 mb-6 md:mb-0">
-                  <div className="flex flex-wrap lg:flex-nowrap">
-                    <div className="mb-6 lg:mb-0 lg:mt-32 lg:-mr-10">
-                      <p className="lg:transform lg:rotate-90 tracking-widest text-lg text-white uppercase">
-                        {/* SEE&nbsp;YOUR&nbsp;GROWTH */}
-                        FRASE&nbsp;AQUI&nbsp;3PALAVRAS
-                        {/* PATERCAST */}
-                      </p>
-                    </div>
-                    <div>
-                      <h2 className="mb-8 text-4xl lg:text-6xl text-white font-bold">
-                        Um movimento para o resgate da paternidade
-                      </h2>
-
-                      <a
-                        className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-secondary-500 hover:bg-secondary-400 transition duration-200"
-                        href="https://open.spotify.com/show/7ztRCvPUb34pLYbTl5DiQo?si=523c0aa23dc548b5"
-                        target="_blank"
-                      >
-                        Spotify
-                      </a>
-                      <a
-                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:text-secondary-400  hover:bg-gray-50 hover:border-gray-50 transition duration-200"
-                        href="https://www.youtube.com/@PaterCast"
-                        target="_blank"
-                      >
-                        youtube
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="md:absolute h-full top-0 right-0 w-full md:w-1/2 mr-10 px-4">
-                  <img
-                    className="w-full h-auto object-cover"
-                    src={"/assets/hero-redendo.png"}
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-            <div className="navbar-backdrop fixed inset-0 bg-blue-800 opacity-90" />
-            <nav className="relative flex flex-col py-8 w-full h-full bg-white border-r overflow-y-auto">
-              <div className="flex items-center mb-16 pr-6">
-                <a
-                  className="ml-16 mr-auto text-xl text-blue-800 font-semibold leading-none"
-                  href="#"
-                >
-                  <img src="images/Vision-white-1.svg" alt="" width={150} />
-                </a>
-              </div>
-              <div>
-                <ul>
-                  <li className="mb-1">
-                    <a
-                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
-                      href="#"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
-                      href="#"
-                    >
-                      Company
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
-                      href="#"
-                    >
-                      Services
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
-                      href="#"
-                    >
-                      Testimonials
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-auto px-10">
-                <div className="pt-6">
-                  <a
-                    className="block mb-2 py-4 text-center text-blue-800 font-semibold"
-                    href="#"
-                  >
-                    Get estimate
-                  </a>
-                  <a
-                    className="block py-4 text-center text-blue-800 leading-normal uppercase border-2 border-blue-800 hover:bg-blue-50 font-semibold"
-                    href="#"
-                  >
-                    CONTACT
-                  </a>
-                </div>
-                <p className="mt-6 mb-4 text-sm text-center text-secondary-400">
-                  <span>
-                    © 2021 All rights reserved © Wireframes Corporation 2021
-                  </span>
-                </p>
-              </div>
-            </nav>
-          </div>
-        </section>
-        <section className="relative flex py-20 2xl:py-40  bg-darkCoolGray-500 overflow-hidden justify-center items-center ">
-          <div className="absolute h-40 w-40 bg-primary-500 bottom-0 right-0 -mr-20 -mb-20 rounded-full" />
-
-          <div className="container flex   flex-col md:flex-col lg:flex-row w-full  ">
-            <div className="lg:px-10 py-10 lg:py-0 flex justify-center items-center lg:h-full ">
-              <iframe
-                width="650"
-                height="365"
-                src="https://www.youtube.com/embed/Qrw_B5OjH3E?si=BN-GSdT2eVKksJFT?autoplay=0&rel=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <motion.div
-              className="   flex lg:items-center "
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.5,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-            >
-              <div className="flex flex-wrap -mx-6 lg:-mx-8">
-                <div className="w-full md:w-1/2 lg:w-1/3  px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-5 justify-center items-center lg:w-10 lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 35 35"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0)">
-                        <path
-                          d="M22.6042 34.9999H2.1875C0.981458 34.9999 0 34.0185 0 32.8124V12.3958C0 11.1897 0.981458 10.2083 2.1875 10.2083H22.6042C23.8102 10.2083 24.7917 11.1897 24.7917 12.3958V32.8124C24.7917 34.0185 23.8102 34.9999 22.6042 34.9999ZM2.1875 11.6666C1.78646 11.6666 1.45833 11.9933 1.45833 12.3958V32.8124C1.45833 33.2149 1.78646 33.5416 2.1875 33.5416H22.6042C23.0052 33.5416 23.3333 33.2149 23.3333 32.8124V12.3958C23.3333 11.9933 23.0052 11.6666 22.6042 11.6666H2.1875Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M34.2702 5.83333C33.8677 5.83333 33.541 5.50667 33.541 5.10417V3.64583C33.541 2.43979 32.5596 1.45833 31.3535 1.45833H29.8952C29.4927 1.45833 29.166 1.13167 29.166 0.729167C29.166 0.326667 29.4927 0 29.8952 0H31.3535C33.3646 0 34.9993 1.63625 34.9993 3.64583V5.10417C34.9993 5.50667 34.6727 5.83333 34.2702 5.83333Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M6.56217 5.83333C6.15967 5.83333 5.83301 5.50667 5.83301 5.10417V3.64583C5.83301 1.63625 7.4678 0 9.47884 0H10.9372C11.3397 0 11.6663 0.326667 11.6663 0.729167C11.6663 1.13167 11.3397 1.45833 10.9372 1.45833H9.47884C8.2728 1.45833 7.29134 2.43979 7.29134 3.64583V5.10417C7.29134 5.50667 6.96467 5.83333 6.56217 5.83333Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M24.0618 1.45833H16.7702C16.3677 1.45833 16.041 1.13167 16.041 0.729167C16.041 0.326667 16.3677 0 16.7702 0H24.0618C24.4643 0 24.791 0.326667 24.791 0.729167C24.791 1.13167 24.4643 1.45833 24.0618 1.45833Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M31.3535 29.1666H29.8952C29.4927 29.1666 29.166 28.8399 29.166 28.4374C29.166 28.0349 29.4927 27.7083 29.8952 27.7083H31.3535C32.5596 27.7083 33.541 26.7268 33.541 25.5208V24.0624C33.541 23.6599 33.8677 23.3333 34.2702 23.3333C34.6727 23.3333 34.9993 23.6599 34.9993 24.0624V25.5208C34.9993 27.5303 33.3646 29.1666 31.3535 29.1666Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M34.2702 18.9583C33.8677 18.9583 33.541 18.6316 33.541 18.2291V10.9374C33.541 10.5349 33.8677 10.2083 34.2702 10.2083C34.6727 10.2083 34.9994 10.5349 34.9994 10.9374V18.2291C34.9994 18.6316 34.6727 18.9583 34.2702 18.9583Z"
-                          fill="white"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                  <div className="pb-px mb-12 bg-gray-500" />
-                  <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Lorem Ipsum
-                  </h3>
-                  <p className="text-lg text-gray-200">
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic.
-                  </p>
-                </div>
-                <div className="w-full md:w-1/2 lg:w-1/3 px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-5 justify-center items-center lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 35 35"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0)">
-                        <path
-                          d="M24.0625 18.9583C23.7402 18.9583 23.431 18.8927 23.1467 18.7615L17.5 16.1175L11.8592 18.7585C11.569 18.8927 11.2598 18.9583 10.9375 18.9583C9.73146 18.9583 8.75 17.9769 8.75 16.7708C8.75 16.4529 8.81417 16.1583 8.94833 15.8681L15.5079 1.28917C15.8419 0.510417 16.6265 0 17.5 0C18.3735 0 19.1581 0.510417 19.4965 1.30083L26.0546 15.874C26.1858 16.1583 26.25 16.4529 26.25 16.7708C26.25 17.9769 25.2685 18.9583 24.0625 18.9583ZM17.5 14.5833C17.605 14.5833 17.7115 14.6067 17.8092 14.6519L23.7592 17.4373C24.166 17.6225 24.7917 17.2856 24.7917 16.7708C24.7917 16.6629 24.7712 16.5754 24.7275 16.4763L18.1621 1.88854C17.9346 1.35771 17.061 1.36792 16.8423 1.87833L10.2754 16.4719C10.2287 16.5754 10.2083 16.6629 10.2083 16.7708C10.2083 17.2856 10.8092 17.6327 11.2467 17.4358L17.1908 14.6533C17.2885 14.6067 17.395 14.5833 17.5 14.5833Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M17.4997 35C8.65488 35 1.45801 27.8031 1.45801 18.9583C1.45801 12.9194 4.7903 7.46227 10.154 4.71769C10.507 4.53685 10.9518 4.6754 11.1355 5.0356C11.3193 5.3929 11.1763 5.83331 10.8176 6.0156C5.94384 8.50936 2.91634 13.4691 2.91634 18.9583C2.91634 26.9996 9.45842 33.5417 17.4997 33.5417C25.5409 33.5417 32.083 26.9996 32.083 18.9583C32.083 13.4794 29.0613 8.51956 24.1963 6.0156C23.8376 5.83185 23.6961 5.39144 23.8813 5.03414C24.0665 4.67539 24.507 4.53539 24.8628 4.7206C30.2163 7.47394 33.5413 12.931 33.5413 18.9583C33.5413 27.8031 26.3445 35 17.4997 35Z"
-                          fill="white"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                  <div className="pb-px mb-12 bg-gray-500" />
-                  <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Lorem Ipsum
-                  </h3>
-                  <p className="text-lg text-gray-200">
-                    Prinint, and publishing industries for previewing layouts
-                    and visual mockups.
-                  </p>
-                </div>
-                <div className="w-full md:w-1/2 lg:w-1/3 px-6 lg:px-8 mb-10 lg:mb-0">
-                  <span className="flex mb-5 justify-center items-center lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 36 35"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0)">
-                        <path
-                          d="M32.25 35H5.25C3.183 35 1.5 33.3638 1.5 31.3542V3.64588C1.5 3.24338 1.836 2.91672 2.25 2.91672C2.664 2.91672 3 3.24338 3 3.64588V31.3542C3 32.5603 4.0095 33.5417 5.25 33.5417H31.5V6.56255C31.5 6.16005 31.836 5.83338 32.25 5.83338C32.664 5.83338 33 6.16005 33 6.56255V34.2709C33 34.6734 32.664 35 32.25 35Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M32.25 7.29167H5.25C3.183 7.29167 1.5 5.65542 1.5 3.64583C1.5 1.63625 3.183 0 5.25 0H29.25C29.664 0 30 0.326667 30 0.729167V5.83333H32.25C32.664 5.83333 33 6.16 33 6.5625C33 6.965 32.664 7.29167 32.25 7.29167ZM5.25 1.45833C4.0095 1.45833 3 2.43979 3 3.64583C3 4.85187 4.0095 5.83333 5.25 5.83333H28.5V1.45833H5.25Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M12.9868 27.7055C12.2338 27.7055 11.6158 27.4897 11.1718 27.0566C10.2898 26.1991 10.2808 24.6838 11.1478 22.7866C11.9158 21.1051 13.3018 19.2443 15.0478 17.5482C16.7938 15.8507 18.7063 14.5047 20.4358 13.7565C22.3858 12.9122 23.9443 12.9209 24.8278 13.7799C25.7098 14.6374 25.7188 16.154 24.8518 18.0499C24.0838 19.7313 22.6978 21.5922 20.9518 23.2882C19.2058 24.9857 17.2933 26.3318 15.5638 27.0799C14.5963 27.4955 13.7263 27.7055 12.9868 27.7055ZM23.0143 14.582C22.5043 14.582 21.8188 14.754 21.0448 15.088C19.4803 15.7647 17.7268 17.0043 16.1068 18.5778C14.4868 20.1513 13.2148 21.8561 12.5188 23.3772C11.9488 24.627 11.8378 25.6405 12.2323 26.024C12.6268 26.4076 13.6693 26.2997 14.9548 25.7455C16.5193 25.0688 18.2728 23.8293 19.8928 22.2557C21.5128 20.6822 22.7863 18.9774 23.4823 17.4549C24.0523 16.2051 24.1633 15.1916 23.7688 14.808C23.6113 14.6563 23.3503 14.582 23.0143 14.582Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M23.0128 27.7054C22.2733 27.7054 21.4033 27.4969 20.4358 27.0784C18.7063 26.3317 16.7923 24.9842 15.0478 23.2867C13.3018 21.5892 11.9173 19.7298 11.1478 18.0484C10.2808 16.1525 10.2898 14.6359 11.1718 13.7784C12.0523 12.9209 13.6138 12.9121 15.5638 13.755C17.2933 14.5017 19.2073 15.8492 20.9518 17.5467C22.6978 19.2442 24.0823 21.1036 24.8518 22.785C25.7188 24.6823 25.7098 26.1975 24.8278 27.055C24.3838 27.4882 23.7658 27.7054 23.0128 27.7054ZM12.9853 14.5819C12.6478 14.5819 12.3898 14.6563 12.2323 14.8094C11.8378 15.1929 11.9488 16.2065 12.5188 17.4563C13.2148 18.9773 14.4898 20.6821 16.1083 22.2571C17.7268 23.8321 19.4803 25.0702 21.0463 25.7469C22.3318 26.3025 23.3743 26.4075 23.7688 26.0254C24.1633 25.6419 24.0523 24.6284 23.4823 23.3786C22.7863 21.8575 21.5113 20.1527 19.8928 18.5777C18.2743 17.0027 16.5208 15.7646 14.9548 15.0879C14.1808 14.754 13.4953 14.5819 12.9853 14.5819ZM11.7013 14.2932H11.7163H11.7013Z"
-                          fill="white"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                  <div className="pb-px mb-12 bg-gray-500" />
-                  <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Lorem Ipsum
-                  </h3>
-                  <p className="text-lg text-gray-200">
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic, print,
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        <Hero />
+        <About />
         <section className="py-20 2xl:py-40 bg-black overflow-hidden">
           <div className="container px-4 mx-auto">
             <div className="mb-10 max-w-xl mx-auto mb-24 text-center">
               <span className="text-lg font-bold text-[#E57926] ">
-                Lorem Ipsum
+                um convite para:
               </span>
               <h2 className="mt-12 text-5xl lg:text-6xl text-white font-bold font-heading">
-                Lorem Ipsum
+                uma jornada na paternidade
               </h2>
             </div>
             <div className="relative px-8 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-orange-500 rounded-xl overflow-hidden">
               <div className="w-full lg:w-1/3 pt-12 lg:py-12">
-                <h3 className="mb-4 text-xl font-bold text-white">
-                  Lorem Ipsum
-                </h3>
+                {/* <h3 className="mb-4 text-xl font-bold text-white">
+                  Redescobrindo a masculinidade
+                </h3> */}
                 <p className="text-xl text-gray-300">
-                  Lorem ipsum is placeholder text commonly used in the graphic,
-                  print,
+                  Estamos aqui para construir uma comunidade que convide todos a
+                  explorar o significado da paternidade. Oferecemos conteúdo
+                  autêntico e inspirador para enriquecer essa jornada.
                 </p>
               </div>
               <img
@@ -416,11 +94,11 @@ export default function Home() {
                   </div>
                   <div className="max-w-xs">
                     <h3 className="mb-6 text-lg font-bold font-heading text-white">
-                      Get in touch
+                      Ouvir
                     </h3>
                     <p className="text-lg text-gray-200">
-                      Nothing will happen unless you will let us. Leave us your
-                      contact and let's talk!
+                      Comece sua jornada de redescoberta masculina ouvindo o
+                      patercast.
                     </p>
                   </div>
                 </div>
@@ -434,10 +112,11 @@ export default function Home() {
                   </div>
                   <div className="max-w-xs">
                     <h3 className="mb-6 text-lg font-bold font-heading text-white">
-                      Let us understand your business
+                      Absorva e reflita
                     </h3>
                     <p className="text-lg text-gray-200">
-                      We want to be at your side as you grow your business.
+                      Absorva o contéudo e reserve um tempo para refletir sobre
+                      o que foi dito.
                     </p>
                   </div>
                 </div>
@@ -451,24 +130,24 @@ export default function Home() {
                   </div>
                   <div className="max-w-xs">
                     <h3 className="mb-6 text-lg font-bold font-heading text-white">
-                      Let us do our magic
+                      Compartilhar e construa juntos
                     </h3>
                     <p className="text-lg text-gray-200">
-                      We will propose activities that add real value to your
-                      business.
+                      Compartilhe essa experiencia com amigos e familiares,
+                      contamos com você para construir essa comunidade.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <a
                 className="inline-block px-12 py-5 text-white font-bold bg-primary-500 hover:bg-primary-600 rounded-full transition duration-200"
                 href="#"
               >
                 Works for me
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="py-20 2xl:py-40">
@@ -476,21 +155,21 @@ export default function Home() {
             <div className="max-w-4xl mx-auto">
               <div className="max-w-xl mx-auto mb-12 lg:mb-16 text-center">
                 <span className="text-lg text-primary-500 font-bold">
-                  Lorem Ipsum
+                  podcast
                 </span>
                 <h2 className="mt-8 mb-16 text-5xl font-bold font-heading">
-                  Lorem ipsum is placeholder text
+                  um bom papo muda o mundo
                 </h2>
               </div>
               <div className="lg:flex justify-center mb-16 mx-auto pb-6 border-b border-gray-50">
-                <button className="w-full md:w-auto px-8 py-4 text-lg font-bold shadow rounded-lg">
+                <div className="w-full md:w-auto px-8 py-4 text-lg font-bold shadow rounded-lg">
                   Episódios
-                </button>
+                </div>
               </div>
 
               <div className="flex flex-wrap justify-center items-center mb-12 lg:mb-16 -m-6">
                 {epList.map((uri, index) => (
-                  <PosdcastItem uri={uri} />
+                  <PosdcastItem uri={uri} key={index} />
                 ))}
               </div>
               <div className="mt-20 text-center">
@@ -597,7 +276,11 @@ export default function Home() {
                     <p className="mb-4 text-lg text-white font-bold">
                       Co-Founder
                     </p>
-                    <a className="flex justify-end" href="#">
+                    <a
+                      className="flex justify-end"
+                      href="https://www.instagram.com/antonioluisgarcia7"
+                      target="_blank"
+                    >
                       <svg
                         className="text-white hover:text-gray-100"
                         width={27}
@@ -635,7 +318,11 @@ export default function Home() {
                       <p className="mb-4 text-lg text-white font-bold">
                         Co-Founder
                       </p>
-                      <a className="flex justify-end" href="#">
+                      <a
+                        className="flex justify-end"
+                        href="https://www.instagram.com/fe_zapala/"
+                        target="_blank"
+                      >
                         <svg
                           className="text-white hover:text-gray-100"
                           width={27}
@@ -903,7 +590,7 @@ export default function Home() {
             <span className="text-gray-300">All rights reserved.</span>
           </p>
         </section>
-      </>
+      </div>
     </React.Fragment>
   );
 }

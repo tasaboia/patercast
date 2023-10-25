@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-
+import { motion, useScroll } from "framer-motion";
 const meta = {
   title: "",
   meta: [],
@@ -11,12 +11,28 @@ const meta = {
 };
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   return (
     <React.Fragment>
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <>
+        {" "}
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-2 bg-secondary-500"
+          style={{
+            scaleX: scrollYProgress,
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: "10px",
+            // background: "red",
+            transformOrigin: "0%",
+            zIndex: 9999,
+          }}
+        />
         <section className="relative pb-20 bg-primary-500 overflow-hidden">
           <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-between">
             <img src="/assets/logo.png" alt="" width={150} height={30} />
@@ -98,6 +114,7 @@ export default function Home() {
                       <h2 className="mb-8 text-4xl lg:text-6xl text-white font-bold">
                         Um movimento para o resgate da paternidade
                       </h2>
+
                       <a
                         className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-secondary-500 hover:bg-secondary-400 transition duration-200"
                         href="#"
@@ -185,7 +202,7 @@ export default function Home() {
                     CONTACT
                   </a>
                 </div>
-                <p className="mt-6 mb-4 text-sm text-center text-blue-400">
+                <p className="mt-6 mb-4 text-sm text-center text-secondary-400">
                   <span>
                     © 2021 All rights reserved © Wireframes Corporation 2021
                   </span>
@@ -197,7 +214,16 @@ export default function Home() {
         <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
           <div className="absolute h-40 w-40 bg-primary-500 bottom-0 right-0 -mr-20 -mb-20 rounded-full" />
           <div className="container px-4 mx-auto">
-            <div>
+            <motion.div
+              className="box"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <div className="flex flex-wrap -mx-6 lg:-mx-8">
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
                   <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
@@ -350,7 +376,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
         <section className="py-20 2xl:py-40 bg-black overflow-hidden">
@@ -446,7 +472,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <a
-                className="inline-block px-12 py-5 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full transition duration-200"
+                className="inline-block px-12 py-5 text-white font-bold bg-primary-500 hover:bg-primary-600 rounded-full transition duration-200"
                 href="#"
               >
                 Works for me
@@ -533,7 +559,7 @@ export default function Home() {
               </div>
               <div className="mt-20 text-center">
                 <a
-                  className="inline-block py-4 px-12 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full"
+                  className="inline-block py-4 px-12 text-white font-bold bg-primary-500 hover:bg-primary-600 rounded-full"
                   href="#"
                 >
                   See all
@@ -542,7 +568,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="relative pt-20 pb-32 2xl:py-40 bg-gray-800 overflow-hidden">
+        <section className="relative pt-20 pb-32 2xl:py-40 bg-secondary-700 overflow-hidden">
           <div className="absolute bottom-0 inset-x-0 h-full bg-gradient-/zospace-1" />
           <div className="absolute bottom-0 inset-x-0 h-3/5 w-2full -ml-64 -mb-12 bg-gradient-/zospace-2 transform -rotate-6" />
           <div className="relative container px-3 mx-auto">
@@ -559,7 +585,7 @@ export default function Home() {
                   business. If you’re ready to move faster, we are here to help.
                 </p>
                 <a
-                  className="inline-block mb-4 sm:mb-0 sm:mr-4 py-4 px-12 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full transition duration-200"
+                  className="inline-block mb-4 sm:mb-0 sm:mr-4 py-4 px-12 text-white font-bold bg-primary-500 hover:bg-primary-600 rounded-full transition duration-200"
                   href="#"
                 >
                   Write us now
@@ -574,7 +600,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20 2xl:py-40 bg-gray-800">
+        <section className="py-20 2xl:py-40 bg-secondary-700">
           <div className="container px-4 mx-auto">
             <div className="max-w-5xl mx-auto">
               <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">
@@ -584,7 +610,7 @@ export default function Home() {
                 <div className="w-full lg:w-1/4 px-4">
                   <div>
                     <a
-                      className="hidden lg:inline-block w-full p-10 bg-primary-500 hover:bg-blue-600 rounded-lg transition duration-200"
+                      className="hidden lg:inline-block w-full p-10 bg-primary-500 hover:bg-primary-600 rounded-lg transition duration-200"
                       href="#"
                     >
                       <h3 className="mb-14 text-3xl text-white font-bold font-heading">
@@ -702,10 +728,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+        <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
           <div className="container px-4 mx-auto">
             <div className="mb-14 text-center">
-              <span className="text-lg text-blue-400 font-bold">
+              <span className="text-lg text-secondary-400 font-bold">
                 What's new at Shuffle
               </span>
               <h2 className="mt-8 text-5xl font-bold font-heading text-white">
@@ -805,7 +831,7 @@ export default function Home() {
             </div>
             <div className="mt-14 lg:mt-24 text-center">
               <a
-                className="inline-block py-5 px-12 mr-4 bg-primary-500 hover:bg-blue-600 rounded-full text-white font-bold transition duration-200"
+                className="inline-block py-5 px-12 mr-4 bg-primary-500 hover:bg-primary-600 rounded-full text-white font-bold transition duration-200"
                 href="#"
               >
                 See all
@@ -813,7 +839,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20 2xl:py-40 bg-gray-800">
+        <section className="py-20 2xl:py-40 bg-primary-500">
           <div className="container mx-auto px-4 mb-12 md:mb-20">
             <div className="max-w-4xl mx-auto text-center">
               <a

@@ -105,7 +105,7 @@ export default function Home() {
                         Spotify
                       </a>
                       <a
-                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:border-gray-50 transition duration-200"
+                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:text-[#E57926] hover:bg-gray-50 hover:border-gray-50 transition duration-200"
                         href="#"
                       >
                         youtube
@@ -113,7 +113,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:block absolute top-0 right-0 w-full md:w-1/2 mr-10 px-4">
+                <div className="md:absolute top-0 right-0 w-full md:w-1/2 mr-10 px-4">
                   <img
                     className="w-full h-80 lg:h-full object-cover"
                     src={"/assets/hero.png"}

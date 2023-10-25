@@ -263,11 +263,11 @@ export default function Home() {
                   </span>
                   <div className="pb-px mb-12 bg-gray-500" />
                   <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Insight and Strategy{" "}
+                    Lorem Ipsum
                   </h3>
                   <p className="text-lg text-gray-200">
-                    Marketing strategies that can be delivered through digital
-                    marketing
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic.
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
@@ -294,11 +294,11 @@ export default function Home() {
                   </span>
                   <div className="pb-px mb-12 bg-gray-500" />
                   <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Organic Marketing
+                    Lorem Ipsum
                   </h3>
                   <p className="text-lg text-gray-200">
-                    Creating an organic level of awareness is beneficial all
-                    stages of the marketing funnel
+                    Prinint, and publishing industries for previewing layouts
+                    and visual mockups.
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-10 lg:mb-0">
@@ -333,11 +333,11 @@ export default function Home() {
                   </span>
                   <div className="pb-px mb-12 bg-gray-500" />
                   <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Paid Media
+                    Lorem Ipsum
                   </h3>
                   <p className="text-lg text-gray-200">
-                    Performance marketing is about using the right approach and
-                    the right message to get your audience
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic, print,
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8">
@@ -366,11 +366,11 @@ export default function Home() {
                   </span>
                   <div className="pb-px mb-12 bg-gray-500" />
                   <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Website creation
+                    Lorem Ipsum
                   </h3>
                   <p className="text-lg text-gray-200">
-                    Designing, building and optimising websites and apps that
-                    perform.
+                    Lorem ipsum is placeholder text commonly used in the
+                    graphic, print.
                   </p>
                 </div>
               </div>
@@ -381,20 +381,20 @@ export default function Home() {
           <div className="container px-4 mx-auto">
             <div className="mb-10 max-w-xl mx-auto mb-24 text-center">
               <span className="text-lg font-bold text-[#E57926] ">
-                How it works
+                Lorem Ipsum
               </span>
               <h2 className="mt-12 text-5xl lg:text-6xl text-white font-bold font-heading">
-                Be bold and get results
+                Lorem Ipsum
               </h2>
             </div>
             <div className="relative px-8 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-orange-500 rounded-xl overflow-hidden">
               <div className="w-full lg:w-1/3 pt-12 lg:py-12">
                 <h3 className="mb-4 text-xl font-bold text-white">
-                  How it work? Steps
+                  Lorem Ipsum
                 </h3>
                 <p className="text-xl text-gray-300">
-                  Our team is passionate about the success of your business and
-                  aims to help you get the most out of your budget.{" "}
+                  Lorem ipsum is placeholder text commonly used in the graphic,
+                  print,
                 </p>
               </div>
               <img
@@ -483,10 +483,10 @@ export default function Home() {
             <div className="max-w-4xl mx-auto">
               <div className="max-w-xl mx-auto mb-12 lg:mb-16 text-center">
                 <span className="text-lg text-primary-500 font-bold">
-                  Our Works
+                  Lorem Ipsum
                 </span>
                 <h2 className="mt-8 mb-16 text-5xl font-bold font-heading">
-                  Get to know us by our works
+                  Lorem ipsum is placeholder text
                 </h2>
               </div>
               <div className="lg:flex justify-center mb-16 mx-auto pb-6 border-b border-gray-50">
@@ -726,14 +726,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
+        {/* <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
           <div className="container px-4 mx-auto">
             <div className="mb-14 text-center">
               <span className="text-lg text-secondary-400 font-bold">
-                What's new at Shuffle
+                Lorem Ipsum
               </span>
               <h2 className="mt-8 text-5xl font-bold font-heading text-white">
-                Latest blog
+                Lorem Ipsum
               </h2>
             </div>
             <div className="flex flex-wrap -m-6">
@@ -836,17 +836,17 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="py-20 2xl:py-40 bg-primary-500">
           <div className="container mx-auto px-4 mb-12 md:mb-20">
             <div className="max-w-4xl mx-auto text-center">
-              <a
+              {/* <a
                 className="inline-block mb-20 text-white text-xl font-bold"
                 href="#"
               >
                 <img src="images/Group-4.svg" alt="" width={200} />
-              </a>
-              <ul className="mb-12 md:mb-20 flex flex-wrap items-center justify-center space-x-6 md:justify-between text-lg">
+              </a> */}
+              {/* <ul className="mb-12 md:mb-20 flex flex-wrap items-center justify-center space-x-6 md:justify-between text-lg">
                 <li className="mb-4 md:mb-0">
                   <a
                     className="font-bold text-white hover:text-gray-100"
@@ -895,32 +895,26 @@ export default function Home() {
                     Contact
                   </a>
                 </li>
-              </ul>
+              </ul> */}
               <div className="flex justify-center">
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
                   href="#"
                 >
                   <svg
-                    className="h-4 w-4 text-white"
-                    width={18}
-                    height={18}
-                    viewBox="0 0 18 18"
+                    width={20}
+                    height={20}
+                    viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clipPath="url(#clip0)">
-                      <path
-                        d="M17.0064 3.181e-08H0.992752C0.444397 0.00027469 -0.000137297 0.445084 3.181e-08 0.993576V17.0072C0.00027469 17.5556 0.445084 18.0001 0.993576 18H17.0064C17.5551 18.0001 17.9999 17.5555 18 17.0068C18 17.0067 18 17.0066 18 17.0064V0.992752C17.9997 0.444397 17.5549 -0.000137297 17.0064 3.181e-08Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M12.4277 18.0001V11.0391H14.7744L15.126 8.31453H12.4277V6.57924C12.4277 5.79221 12.6462 5.25594 13.7748 5.25594H15.2051V2.82562C14.9562 2.79253 14.1025 2.71851 13.109 2.71851C11.0348 2.71851 9.61523 3.98413 9.61523 6.30939V8.31453H7.27734V11.0391H9.61523V18.0001H12.4277Z"
-                        fill="#2D2D33"
-                      />
-                    </g>
+                    <path
+                      d="M15.4 11.16L10.5 8.00005C10.348 7.91228 10.1755 7.86608 10 7.86608C9.82446 7.86608 9.65202 7.91228 9.5 8.00005C9.35174 8.08557 9.22791 8.20771 9.14036 8.35479C9.05282 8.50187 9.00449 8.66895 9 8.84005V15.16C9.0013 15.3382 9.05019 15.5129 9.14161 15.6658C9.23303 15.8188 9.36367 15.9445 9.52 16.0301C9.66543 16.1157 9.83123 16.1606 10 16.16C10.1771 16.1479 10.3487 16.093 10.5 16L15.4 12.84C15.5403 12.7494 15.6557 12.625 15.7356 12.4783C15.8155 12.3315 15.8574 12.1671 15.8574 12C15.8574 11.833 15.8155 11.6686 15.7356 11.5218C15.6557 11.3751 15.5403 11.2507 15.4 11.16ZM11 13.32V10.68L13 12L11 13.32ZM19.38 4.51005L17.83 4.31005C13.991 3.84001 10.109 3.84001 6.27 4.31005L4.72 4.51005C3.97471 4.59116 3.2854 4.94392 2.78368 5.50098C2.28195 6.05803 2.00297 6.78036 2 7.53005V16.47C2.00636 17.2086 2.28051 17.9198 2.77155 18.4715C3.26259 19.0233 3.93715 19.3781 4.67 19.47L6.22 19.66C8.13776 19.8931 10.0681 20.0066 12 20C13.9323 20 15.8627 19.8798 17.78 19.64L19.33 19.4501C20.0628 19.3581 20.7374 19.0033 21.2285 18.4515C21.7195 17.8998 21.9936 17.1886 22 16.4501V7.53005C21.9985 6.78803 21.7265 6.072 21.235 5.51609C20.7435 4.96017 20.0662 4.6025 19.33 4.51005H19.38ZM20.05 16.51C20.0508 16.762 19.9565 17.0049 19.7859 17.1903C19.6154 17.3757 19.3811 17.4899 19.13 17.51L17.58 17.7001C13.9077 18.1601 10.1923 18.1601 6.52 17.7001L4.97 17.51C4.71889 17.4899 4.48463 17.3757 4.31406 17.1903C4.1435 17.0049 4.04919 16.762 4.05 16.51V7.53005C4.06192 7.282 4.16055 7.04601 4.32869 6.86325C4.49683 6.68049 4.7238 6.56256 4.97 6.53005L6.47 6.30005C10.1427 5.8467 13.8573 5.8467 17.53 6.30005L19.08 6.49005C19.3262 6.52256 19.5532 6.64049 19.7213 6.82325C19.8894 7.00601 19.9881 7.242 20 7.49005L20.05 16.51Z"
+                      fill="white"
+                    />
                   </svg>
                 </a>
+
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
                   href="#"
@@ -971,7 +965,7 @@ export default function Home() {
             </div>
           </div>
           <p className="text-center text-lg text-white pt-12 px-4 border-t border-gray-500">
-            <span>© 2021 Shuffle.</span>
+            <span>© 2023 Orange Joy.</span>
             <span className="text-gray-300">All rights reserved.</span>
           </p>
         </section>

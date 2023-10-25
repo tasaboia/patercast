@@ -82,9 +82,9 @@ export default function Home() {
             </div>
           </nav>
           <div className="relative pt-12 md:pt-0">
-            <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center">
+            {/* <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center">
               <h2 className="stroke opacity-75">VISION</h2>
-            </div>
+            </div> */}
             <div className="container px-4 mx-auto">
               <div className="relative flex flex-wrap items-center -mx-4">
                 <div className="relative z-10 w-full md:w-1/2 px-4 lg:py-32 mb-6 md:mb-0">

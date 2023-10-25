@@ -35,12 +35,10 @@ export default function Home() {
         />
         <section className="relative pb-20 bg-primary-500 overflow-hidden">
           <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-between">
-            <img src="/assets/logo.png" alt="" width={150} height={30} />
-
+            <div className="w-28">
+              <img src="/assets/logo.png" alt="" />
+            </div>
             <div className="flex justify-between items-center">
-              <a className="text-xl text-white font-semibold" href="#">
-                <img src="/images/Vision-white-1.svg" alt="" width={150} />
-              </a>
               <div className="lg:hidden">
                 <button className="navbar-burger flex items-center p-3 rounded">
                   <svg

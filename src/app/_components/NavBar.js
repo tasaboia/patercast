@@ -2,11 +2,11 @@ import React from "react";
 
 export default function NavBar() {
   return (
-    <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-between">
+    <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-center">
       <div className="w-28">
         <img src="/assets/logo.png" alt="" />
       </div>
-      <div className="flex justify-between items-center">
+      {/* <div className="flex justify-between items-center">
         <div className="lg:hidden">
           <button className="navbar-burger flex items-center p-3 rounded">
             <svg
@@ -29,7 +29,7 @@ export default function NavBar() {
             Contato
           </a>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 }

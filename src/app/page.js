@@ -112,7 +112,7 @@ export default function Home() {
                   </div>
                   <div className="max-w-xs">
                     <h3 className="mb-6 text-lg font-bold font-heading text-white">
-                      Absorva e reflita
+                      Refletir
                     </h3>
                     <p className="text-lg text-gray-200">
                       Absorva o contéudo e reserve um tempo para refletir sobre
@@ -130,7 +130,7 @@ export default function Home() {
                   </div>
                   <div className="max-w-xs">
                     <h3 className="mb-6 text-lg font-bold font-heading text-white">
-                      Compartilhar e construa juntos
+                      Compartilhar
                     </h3>
                     <p className="text-lg text-gray-200">
                       Compartilhe essa experiencia com amigos e familiares,
@@ -216,43 +216,13 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-        <section className="py-20 2xl:py-14 bg-secondary-700">
+        <section className="py-14 2xl:py-14 bg-secondary-700">
           <div className="container  mx-auto">
             <div className="max-w-5xl mx-auto">
-              <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">
-                Our Team
-              </h2>
+              {/* <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">
+                A dupla
+              </h2> */}
               <div className="flex flex-wrap justify-center -mx-4 mb-20">
-                {/* <div className="w-full lg:w-1/4 px-4">
-                  <div>
-                    <a
-                      className="hidden lg:inline-block w-full p-10 bg-primary-500 hover:bg-primary-600 rounded-lg transition duration-200"
-                      href="#"
-                    >
-                      <h3 className="mb-14 text-3xl text-white font-bold font-heading">
-                        Join us if you want!
-                      </h3>
-                      <div className="flex">
-                        <p className="text-white font-bold">Learn how!</p>
-                        <svg
-                          className="ml-4"
-                          width={19}
-                          height={20}
-                          viewBox="0 0 19 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g clipPath="url(#clip0)">
-                            <path
-                              d="M18.7383 1.47293L18.7383 10.93L17.5562 10.93L17.5562 2.89739L0.834948 19.6245L0.00154682 18.7911L16.7228 2.064L9.28125 2.064L9.28125 0.881867L18.1472 0.881866C18.4737 0.881866 18.7383 1.14648 18.7383 1.47293Z"
-                              fill="white"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </a>
-                  </div> 
-                </div> */}
                 <div className="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
                   <div>
                     <img
@@ -344,176 +314,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
-          <div className="container px-4 mx-auto">
-            <div className="mb-14 text-center">
-              <span className="text-lg text-secondary-400 font-bold">
-                Lorem Ipsum
-              </span>
-              <h2 className="mt-8 text-5xl font-bold font-heading text-white">
-                Lorem Ipsum
-              </h2>
-            </div>
-            <div className="flex flex-wrap -m-6">
-              <div className="relative w-full lg:w-1/3 p-6">
-                <img
-                  className="hidden lg:block absolute top-0 left-0 -ml-40 mt-24"
-                  src="/zospace-assets/lines/left-line.svg"
-                  alt=""
-                />
-                <div className="relative z-10 bg-gray-700 rounded-lg">
-                  <div className="relative mb-8 h-52">
-                    <img
-                      className="w-full h-full rounded-lg object-cover object-top"
-                      src="https://images.pexels.com/photos/6822288/pexels-photo-6822288.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
-                      <p className="text-xl font-bold">30</p>
-                      <p className="text-xs uppercase text-gray-300">Feb</p>
-                    </div>
-                  </div>
-                  <div className="px-14 pb-10">
-                    <a
-                      className="inline-block pt-4 text-lg text-white hover:text-gray-100 font-bold border-t border-gray-400"
-                      href="#"
-                    >
-                      Artificial Intelligence in Business
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="relative w-full lg:w-1/3 p-6">
-                <img
-                  className="hidden lg:block absolute top-0 left-0 -ml-14 mt-24"
-                  src="/zospace-assets/lines/right-line.svg"
-                  alt=""
-                />
-                <div className="relative z-10 lg:mt-24 bg-gray-700 rounded-lg">
-                  <div className="relative mb-8 h-52">
-                    <img
-                      className="w-full h-full rounded-lg object-cover"
-                      src="https://images.pexels.com/photos/5325768/pexels-photo-5325768.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
-                      <p className="text-xl font-bold">29</p>
-                      <p className="text-xs uppercase text-gray-300">Feb</p>
-                    </div>
-                  </div>
-                  <div className="px-14 pb-10">
-                    <a
-                      className="inline-block pt-4 text-lg text-white hover:text-gray-100 font-bold border-t border-gray-400"
-                      href="#"
-                    >
-                      10 ways to keep your remote teams engaged
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="relative w-full lg:w-1/3 p-6">
-                <img
-                  className="hidden lg:block absolute top-0 right-0 mr-64 mt-24"
-                  src="/zospace-assets/lines/left-line.svg"
-                  alt=""
-                />
-                <div className="relative z-10 bg-gray-700 rounded-lg">
-                  <div className="relative mb-8 h-52">
-                    <img
-                      className="mb-8 w-full h-52 rounded-lg object-cover"
-                      src="https://images.pexels.com/photos/5325708/pexels-photo-5325708.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
-                      alt=""
-                    />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
-                      <p className="text-xl font-bold">25</p>
-                      <p className="text-xs uppercase text-gray-300">Feb</p>
-                    </div>
-                  </div>
-                  <div className="px-14 pb-10">
-                    <a
-                      className="inline-block pt-4 text-lg text-white hover:text-gray-100 font-bold border-t border-gray-400"
-                      href="#"
-                    >
-                      How to make a concept map (+Examples)
-                    </a>
-                  </div>
-                </div>
-                <img
-                  className="hidden lg:block absolute top-0 right-0 -mr-32 mt-24"
-                  src="/zospace-assets/lines/right-line.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="mt-14 lg:mt-24 text-center">
-              <a
-                className="inline-block py-5 px-12 mr-4 bg-primary-500 hover:bg-primary-600 rounded-full text-white font-bold transition duration-200"
-                href="#"
-              >
-                See all
-              </a>
-            </div>
-          </div>
-        </section> */}
         <section className="py-10 2xl:py-10 bg-primary-500">
           <div className="container mx-auto px-4 mb-12 md:mb-20">
             <div className="max-w-4xl mx-auto text-center">
-              {/* <a
-                className="inline-block mb-20 text-white text-xl font-bold"
-                href="#"
-              >
-                <img src="images/Group-4.svg" alt="" width={200} />
-              </a> */}
-              {/* <ul className="mb-12 md:mb-20 flex flex-wrap items-center justify-center space-x-6 md:justify-between text-lg">
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Product
-                  </a>
-                </li>
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Pricing
-                  </a>
-                </li>
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Story
-                  </a>
-                </li>
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li className="mb-4 md:mb-0">
-                  <a
-                    className="font-bold text-white hover:text-gray-100"
-                    href="#"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul> */}
               <div className="flex justify-center">
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"

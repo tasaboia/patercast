@@ -647,9 +647,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-full lg:w-1/4 px-4">
-                  <div className="relative lg:mt-52 inline-block w-full mb-8 p-10 bg-gray-600 rounded-lg transition duration-200">
+                  <div className="relative lg:mt-52 inline-block w-full mb-8 p-10 bg-darkCoolGray-500 rounded-lg transition duration-200">
                     <div
-                      className="absolute top-0 -mt-6 right-0 mr-10 lg:left-0 lg:-ml-5 lg:mt-10 w-14 h-14 bg-gray-600"
+                      className="absolute top-0 -mt-6 right-0 mr-10 lg:left-0 lg:-ml-5 lg:mt-10 w-14 h-14 bg-darkCoolGray-500"
                       style={{
                         clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
                       }}
@@ -684,9 +684,9 @@ export default function Home() {
                       src="/assets/felipe.png"
                       alt=""
                     />
-                    <div className="relative inline-block w-full mb-8 p-10 bg-gray-600 rounded-lg transition duration-200">
+                    <div className="relative inline-block w-full mb-8 p-10 bg-darkCoolGray-500 rounded-lg transition duration-200">
                       <div
-                        className="absolute top-0 -mt-6 left-0 ml-10 w-14 h-14 bg-gray-600"
+                        className="absolute top-0 -mt-6 left-0 ml-10 w-14 h-14 bg-darkCoolGray-500"
                         style={{
                           clipPath:
                             "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",

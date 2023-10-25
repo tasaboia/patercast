@@ -17,173 +17,153 @@ export default function Index() {
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <>
-        <section className="relative pb-20 bg-gray-800 overflow-hidden">
-          <div className="absolute bottom-0 inset-x-0 h-full bg-gradient-zospace-1" />
-          <div className="absolute bottom-0 inset-x-0 h-3/5 w-2full -ml-64 -mb-12 bg-gradient-zospace-2 transform -rotate-6" />
-          <nav className="relative">
-            <div className="flex py-8 px-4 lg:px-8 justify-between items-center">
-              <button className="p-2 navbar-burger">
-                <svg
-                  className="w-10 h-3"
-                  width={39}
-                  height={13}
-                  viewBox="0 0 39 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width={39} height={2} rx={1} fill="#C4C4C4" />
-                  <rect
-                    x={19}
-                    y={11}
-                    width={20}
-                    height={2}
-                    rx={1}
-                    fill="#C4C4C4"
-                  />
-                </svg>
-              </button>
-              <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                <a className="text-2xl text-white font-bold" href="#">
-                  <img src="images/Group-4.svg" alt="" width={300} />
-                </a>
+        <section className="relative pb-20 bg-[#163425] overflow-hidden">
+          <nav className="relative py-8 px-4 xl:px-10 bg-[#163425]">
+            <div className="flex justify-between items-center">
+              <a className="text-xl text-white font-semibold" href="#">
+                <img src="/images/Vision-white-1.svg" alt="" width={150} />
+              </a>
+              <div className="lg:hidden">
+                <button className="navbar-burger flex items-center p-3 rounded">
+                  <svg
+                    className="text-white block h-4 w-4"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                  >
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                  </svg>
+                </button>
               </div>
+              <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:w-auto lg:space-x-10">
+                <li></li>
+                <li>
+                  <a
+                    className="text-white font-semibold hover:text-blue-50"
+                    href="#"
+                  >
+                    Company
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white font-semibold hover:text-blue-50"
+                    href="#"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white font-semibold hover:text-blue-50"
+                    href="#"
+                  >
+                    Testimonials
+                  </a>
+                </li>
+              </ul>
               <div className="hidden lg:block">
                 <a
-                  className="inline-block mr-10 text-lg text-white hover:text-gray-50 font-bold border-b border-gray-200"
+                  className="inline-block px-8 text-white hover:text-blue-50 font-semibold"
                   href="#"
                 >
-                  Write us
+                  Get estimate
                 </a>
                 <a
-                  className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
+                  className="inline-block py-3 px-8 text-sm text-white hover:text-blue-50 uppercase font-semibold border-2 border-white"
                   href="#"
                 >
-                  Schedule call
+                  CONTACT
                 </a>
               </div>
             </div>
           </nav>
-          <div className="relative container px-4 pt-12 md:pt-20 mx-auto">
-            <div className="hidden 2xl:block absolute bottom-0 w-3/5 mb-40 h-2 border-b border-white" />
-            <div className="relative flex flex-wrap -mx-4">
-              <div className="w-full lg:w-1/2 2xl:w-2/5 px-4 mb-12 mb:mb-0">
-                <span className="text-xl lg:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-yellow-200 to-orange-600">
-                  Digital Agency in London
-                </span>
-                <h2 className="max-w-lg lg:max-w-md 2xl:max-w-none mt-7 mb-12 mb:mb-20 text-6xl lg:text-7xl 2xl:text-9xl text-white font-bold font-heading">
-                  Performance marketing with flavour
-                </h2>
-                <p className="mb-12 lg:mb-24 text-lg text-white opacity-90">
-                  Add creativity and tech to your campaigns
-                </p>
-                <div className="flex flex-wrap items-center">
-                  <a
-                    className="inline-block mr-14 px-12 py-5 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                    href="#"
-                  >
-                    Get started
-                  </a>
-                  <div className="w-full sm:w-auto mt-8 sm:mt-0 flex">
-                    <button className="p-2">
-                      <svg
-                        width={11}
-                        height={20}
-                        viewBox="0 0 11 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+          <div className="relative pt-12 md:pt-0">
+            <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center">
+              <h2 className="stroke opacity-75">VISION</h2>
+            </div>
+            <div className="container px-4 mx-auto">
+              <div className="relative flex flex-wrap items-center -mx-4">
+                <div className="relative z-10 w-full md:w-1/2 px-4 lg:py-32 mb-6 md:mb-0">
+                  <div className="flex flex-wrap lg:flex-nowrap">
+                    <div className="mb-6 lg:mb-0 lg:mt-32 lg:-mr-10">
+                      <p className="lg:transform lg:rotate-90 tracking-widest text-lg text-white uppercase">
+                        SEE&nbsp;YOUR&nbsp;GROWTH
+                      </p>
+                    </div>
+                    <div>
+                      <h2 className="mb-8 text-4xl lg:text-6xl text-white font-bold">
+                        Creativity that sparks performance{" "}
+                      </h2>
+                      <a
+                        className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-[#E57926] hover:bg-[#D36918] transition duration-200"
+                        href="#"
                       >
-                        <path
-                          d="M10.7597 18.6258C11.0801 18.942 11.0801 19.4502 10.7597 19.7641C10.4393 20.0781 9.92164 20.0792 9.60124 19.7641L0.240298 10.569C-0.0801018 10.255 -0.0801017 9.74688 0.240298 9.43061L9.60124 0.235462C9.92164 -0.0784849 10.4393 -0.0784848 10.7597 0.235462C11.0801 0.550571 11.0801 1.05986 10.7597 1.37381L2.22247 10.0004L10.7597 18.6258Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </button>
-                    <span className="py-2 px-4">
-                      <svg
-                        width={2}
-                        height={24}
-                        viewBox="0 0 2 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                        Get estimate
+                      </a>
+                      <a
+                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:border-gray-50 transition duration-200"
+                        href="#"
                       >
-                        <path
-                          d="M1 0L1 24"
-                          stroke="white"
-                          strokeOpacity="0.24"
-                        />
-                      </svg>
-                    </span>
-                    <button className="p-2">
-                      <svg
-                        width={11}
-                        height={20}
-                        viewBox="0 0 11 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.2403 1.37424C-0.0801003 1.05797 -0.0801003 0.549844 0.2403 0.235898C0.5607 -0.0780496 1.07836 -0.0792131 1.39876 0.235898L10.7597 9.43104C11.0801 9.74499 11.0801 10.2531 10.7597 10.5694L1.39876 19.7645C1.07836 20.0785 0.560699 20.0785 0.240298 19.7645C-0.0801019 19.4494 -0.0801019 18.9401 0.240298 18.6262L8.77752 9.99964L0.2403 1.37424Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </button>
+                        CONTACT
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-full lg:w-1/2 2xl:w-3/5 px-4">
-                <Image
-                  className="w-full h-full object-contain"
-                  src="/zospace-assets/images/two-phones.png"
-                  alt=""
-                  width={1000}
-                  height={1000}
-                />
+                <div className="hidden md:block absolute top-0 right-0 w-full md:w-1/2 mr-10 px-4">
+                  <img
+                    className="w-full h-80 lg:h-128 object-cover"
+                    src={"/pawel-czerwinski-LSZE-N0hz3s-unsplash.jpg"}
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-            <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80" />
-            <nav className="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
+            <div className="navbar-backdrop fixed inset-0 bg-blue-800 opacity-90" />
+            <nav className="relative flex flex-col py-8 w-full h-full bg-white border-r overflow-y-auto">
               <div className="flex items-center mb-16 pr-6">
                 <a
-                  className="ml-10 mr-auto text-2xl text-gray-800 font-bold"
+                  className="ml-16 mr-auto text-xl text-blue-800 font-semibold leading-none"
                   href="#"
                 >
-                  <img src="images/Group-4.svg" alt="" width={300} />
+                  <img src="images/Vision-white-1.svg" alt="" width={150} />
                 </a>
               </div>
               <div>
                 <ul>
-                  <li className="mb-1 px-10">
+                  <li className="mb-1">
                     <a
-                      className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
                       href="#"
                     >
-                      Product
+                      About
                     </a>
                   </li>
-                  <li className="mb-1 px-10">
+                  <li className="mb-1">
                     <a
-                      className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
                       href="#"
                     >
-                      Story
+                      Company
                     </a>
                   </li>
-                  <li className="mb-1 px-10">
+                  <li className="mb-1">
                     <a
-                      className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
                       href="#"
                     >
-                      Features
+                      Services
                     </a>
                   </li>
-                  <li className="mb-1 px-10">
+                  <li className="mb-1">
                     <a
-                      className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"
+                      className="block pl-16 py-5 font-semibold text-blue-800 hover:bg-blue-50 rounded"
                       href="#"
                     >
-                      Contact
+                      Testimonials
                     </a>
                   </li>
                 </ul>
@@ -191,20 +171,22 @@ export default function Index() {
               <div className="mt-auto px-10">
                 <div className="pt-6">
                   <a
-                    className="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+                    className="block mb-2 py-4 text-center text-blue-800 font-semibold"
                     href="#"
                   >
-                    Write us
+                    Get estimate
                   </a>
                   <a
-                    className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                    className="block py-4 text-center text-blue-800 leading-normal uppercase border-2 border-blue-800 hover:bg-blue-50 font-semibold"
                     href="#"
                   >
-                    Schedule call
+                    CONTACT
                   </a>
                 </div>
-                <p className="mt-6 mb-4 text-lg text-center">
-                  <span>2021 © Zospace. All rights reserved.</span>
+                <p className="mt-6 mb-4 text-sm text-center text-blue-400">
+                  <span>
+                    © 2021 All rights reserved © Wireframes Corporation 2021
+                  </span>
                 </p>
               </div>
             </nav>
@@ -391,21 +373,21 @@ export default function Index() {
               </div>
               <img
                 className="lg:absolute top-0 right-0 bottom-0 h-full w-full lg:w-1/3 object-cover"
-                src="zospace-assets/images/illustration-men-phone.svg"
+                src="/zospace-assets/images/illustration-men-phone.svg"
                 alt=""
               />
             </div>
             <div className="relative flex flex-wrap justify-center -mx-10 mb-20">
               <img
                 className="hidden lg:block absolute inset-y-0 -mr-80 -mt-16"
-                src="zospace-assets/lines/dots-gray.svg"
+                src="/zospace-assets/lines/dots-gray.svg"
                 alt=""
               />
               <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                 <div className="relative flex">
                   <img
                     className="hidden lg:block absolute top-0 right-0 -mr-20 -mt-16"
-                    src="zospace-assets/lines/dots-gray.svg"
+                    src="/zospace-assets/lines/dots-gray.svg"
                     alt=""
                   />
                   <div className="mr-8">
@@ -559,8 +541,8 @@ export default function Index() {
           </div>
         </section>
         <section className="relative pt-20 pb-32 2xl:py-40 bg-gray-800 overflow-hidden">
-          <div className="absolute bottom-0 inset-x-0 h-full bg-gradient-zospace-1" />
-          <div className="absolute bottom-0 inset-x-0 h-3/5 w-2full -ml-64 -mb-12 bg-gradient-zospace-2 transform -rotate-6" />
+          <div className="absolute bottom-0 inset-x-0 h-full bg-gradient-/zospace-1" />
+          <div className="absolute bottom-0 inset-x-0 h-3/5 w-2full -ml-64 -mb-12 bg-gradient-/zospace-2 transform -rotate-6" />
           <div className="relative container px-3 mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-br from-yellow-200 to-orange-600">
@@ -767,7 +749,7 @@ export default function Index() {
               <div className="relative w-full lg:w-1/3 p-6">
                 <img
                   className="hidden lg:block absolute top-0 left-0 -ml-40 mt-24"
-                  src="zospace-assets/lines/left-line.svg"
+                  src="/zospace-assets/lines/left-line.svg"
                   alt=""
                 />
                 <div className="relative z-10 bg-gray-700 rounded-lg">
@@ -795,7 +777,7 @@ export default function Index() {
               <div className="relative w-full lg:w-1/3 p-6">
                 <img
                   className="hidden lg:block absolute top-0 left-0 -ml-14 mt-24"
-                  src="zospace-assets/lines/right-line.svg"
+                  src="/zospace-assets/lines/right-line.svg"
                   alt=""
                 />
                 <div className="relative z-10 lg:mt-24 bg-gray-700 rounded-lg">
@@ -823,7 +805,7 @@ export default function Index() {
               <div className="relative w-full lg:w-1/3 p-6">
                 <img
                   className="hidden lg:block absolute top-0 right-0 mr-64 mt-24"
-                  src="zospace-assets/lines/left-line.svg"
+                  src="/zospace-assets/lines/left-line.svg"
                   alt=""
                 />
                 <div className="relative z-10 bg-gray-700 rounded-lg">
@@ -849,7 +831,7 @@ export default function Index() {
                 </div>
                 <img
                   className="hidden lg:block absolute top-0 right-0 -mr-32 mt-24"
-                  src="zospace-assets/lines/right-line.svg"
+                  src="/zospace-assets/lines/right-line.svg"
                   alt=""
                 />
               </div>

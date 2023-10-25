@@ -17,8 +17,8 @@ export default function Home() {
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <>
-        <section className="relative pb-20 bg-[#163425] overflow-hidden">
-          <nav className="relative py-8 px-4 xl:px-10 bg-[#163425] flex justify-between">
+        <section className="relative pb-20 bg-primary-500 overflow-hidden">
+          <nav className="relative py-8 px-4 xl:px-10 bg-primary-500 flex justify-between">
             <img src="/assets/logo.png" alt="" width={150} height={30} />
 
             <div className="flex justify-between items-center">
@@ -99,13 +99,13 @@ export default function Home() {
                         Um movimento para o resgate da paternidade
                       </h2>
                       <a
-                        className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-[#E57926] hover:bg-[#D36918] transition duration-200"
+                        className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-secondary-500 hover:bg-secondary-400 transition duration-200"
                         href="#"
                       >
                         Spotify
                       </a>
                       <a
-                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:text-[#E57926] hover:bg-gray-50 hover:border-gray-50 transition duration-200"
+                        className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:text-secondary-400  hover:bg-gray-50 hover:border-gray-50 transition duration-200"
                         href="#"
                       >
                         youtube
@@ -113,10 +113,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="md:absolute top-0 right-0 w-full md:w-1/2 mr-10 px-4">
+                <div className="md:absolute h-full top-0 right-0 w-full md:w-1/2 mr-10 px-4">
                   <img
-                    className="w-full h-80 lg:h-full object-cover"
-                    src={"/assets/hero.png"}
+                    className="w-full h-auto object-cover"
+                    src={"/assets/hero-redendo.png"}
                     alt=""
                   />
                 </div>
@@ -194,13 +194,13 @@ export default function Home() {
             </nav>
           </div>
         </section>
-        <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
-          <div className="absolute h-40 w-40 bg-blue-500 bottom-0 right-0 -mr-20 -mb-20 rounded-full" />
+        <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
+          <div className="absolute h-40 w-40 bg-primary-500 bottom-0 right-0 -mr-20 -mb-20 rounded-full" />
           <div className="container px-4 mx-auto">
             <div>
               <div className="flex flex-wrap -mx-6 lg:-mx-8">
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-blue-500 rounded-lg">
+                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
                       className="w-8 h-8"
                       width={35}
@@ -247,7 +247,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-violet-500 rounded-lg">
+                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
                       className="w-8 h-8"
                       width={35}
@@ -278,7 +278,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-10 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-green-500 rounded-lg">
+                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
                       className="w-8 h-8"
                       width={36}
@@ -317,7 +317,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-pink-500 rounded-lg">
+                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
                       className="w-8 h-8"
                       width={35}
@@ -353,17 +353,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+        <section className="py-20 2xl:py-40 bg-black overflow-hidden">
           <div className="container px-4 mx-auto">
             <div className="mb-10 max-w-xl mx-auto mb-24 text-center">
-              <span className="text-lg font-bold text-blue-500">
+              <span className="text-lg font-bold text-[#E57926] ">
                 How it works
               </span>
               <h2 className="mt-12 text-5xl lg:text-6xl text-white font-bold font-heading">
                 Be bold and get results
               </h2>
             </div>
-            <div className="relative px-8 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-gray-600 rounded-xl overflow-hidden">
+            <div className="relative px-8 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-orange-500 rounded-xl overflow-hidden">
               <div className="w-full lg:w-1/3 pt-12 lg:py-12">
                 <h3 className="mb-4 text-xl font-bold text-white">
                   How it work? Steps
@@ -375,7 +375,7 @@ export default function Home() {
               </div>
               <img
                 className="lg:absolute top-0 right-0 bottom-0 h-full w-full lg:w-1/3 object-cover"
-                src="/zospace-assets/images/illustration-men-phone.svg"
+                src="/talking-image.png"
                 alt=""
               />
             </div>
@@ -393,7 +393,7 @@ export default function Home() {
                     alt=""
                   />
                   <div className="mr-8">
-                    <span className="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">
+                    <span className="flex justify-center items-center w-14 h-14 text-white bg-primary-500 text-lg font-bold rounded-full">
                       1
                     </span>
                   </div>
@@ -411,7 +411,7 @@ export default function Home() {
               <div className="w-full lg:w-1/3 px-10 mb-20 lg:mb-0">
                 <div className="flex">
                   <div className="mr-8">
-                    <span className="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">
+                    <span className="flex justify-center items-center w-14 h-14 text-white bg-primary-500 text-lg font-bold rounded-full">
                       2
                     </span>
                   </div>
@@ -428,7 +428,7 @@ export default function Home() {
               <div className="w-full lg:w-1/3 px-10">
                 <div className="flex">
                   <div className="mr-8">
-                    <span className="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">
+                    <span className="flex justify-center items-center w-14 h-14 text-white bg-primary-500 text-lg font-bold rounded-full">
                       3
                     </span>
                   </div>
@@ -446,7 +446,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <a
-                className="inline-block px-12 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                className="inline-block px-12 py-5 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full transition duration-200"
                 href="#"
               >
                 Works for me
@@ -458,7 +458,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="max-w-xl mx-auto mb-12 lg:mb-16 text-center">
-                <span className="text-lg text-blue-500 font-bold">
+                <span className="text-lg text-primary-500 font-bold">
                   Our Works
                 </span>
                 <h2 className="mt-8 mb-16 text-5xl font-bold font-heading">
@@ -533,7 +533,7 @@ export default function Home() {
               </div>
               <div className="mt-20 text-center">
                 <a
-                  className="inline-block py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full"
+                  className="inline-block py-4 px-12 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full"
                   href="#"
                 >
                   See all
@@ -559,7 +559,7 @@ export default function Home() {
                   business. If you’re ready to move faster, we are here to help.
                 </p>
                 <a
-                  className="inline-block mb-4 sm:mb-0 sm:mr-4 py-4 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                  className="inline-block mb-4 sm:mb-0 sm:mr-4 py-4 px-12 text-white font-bold bg-primary-500 hover:bg-blue-600 rounded-full transition duration-200"
                   href="#"
                 >
                   Write us now
@@ -583,13 +583,8 @@ export default function Home() {
               <div className="flex flex-wrap justify-center -mx-4 mb-20">
                 <div className="w-full lg:w-1/4 px-4">
                   <div>
-                    <img
-                      className="mb-8 w-full h-112 lg:h-80 object-cover object-top"
-                      src="https://images.pexels.com/photos/5325840/pexels-photo-5325840.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=940&w=940"
-                      alt=""
-                    />
                     <a
-                      className="hidden lg:inline-block w-full p-10 bg-blue-500 hover:bg-blue-600 rounded-lg transition duration-200"
+                      className="hidden lg:inline-block w-full p-10 bg-primary-500 hover:bg-blue-600 rounded-lg transition duration-200"
                       href="#"
                     >
                       <h3 className="mb-14 text-3xl text-white font-bold font-heading">
@@ -618,39 +613,9 @@ export default function Home() {
                 </div>
                 <div className="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
                   <div>
-                    <div className="relative inline-block w-full mb-8 p-10 bg-gray-600 rounded-lg transition duration-200">
-                      <div
-                        className="absolute top-0 -mt-6 right-0 mr-10 lg:left-0 lg:-ml-5 lg:mt-10 w-14 h-14 bg-gray-600"
-                        style={{
-                          clipPath:
-                            "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-                        }}
-                      />
-                      <h3 className="mb-2 text-3xl text-white font-bold font-heading">
-                        Léa Herrera
-                      </h3>
-                      <p className="mb-4 text-lg text-white font-bold">
-                        UX Designer
-                      </p>
-                      <a className="flex justify-end" href="#">
-                        <svg
-                          className="text-white hover:text-gray-100"
-                          width={27}
-                          height={15}
-                          viewBox="0 0 27 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M26.2042 7.78599L19.5171 14.4731L18.6812 13.6372L24.3611 7.95734L0.709572 7.96153L0.709572 6.78292L24.3611 6.77874L19.0992 1.51681L19.9351 0.680916L26.2042 6.9501C26.4351 7.18093 26.4351 7.55515 26.2042 7.78599Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </a>
-                    </div>
                     <img
                       className="w-full h-112 lg:h-72 object-cover object-top"
-                      src="https://images.pexels.com/photos/5325885/pexels-photo-5325885.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=940&w=940"
+                      src="/assets/antonio.png"
                       alt=""
                     />
                   </div>
@@ -690,7 +655,7 @@ export default function Home() {
                   <div>
                     <img
                       className="mb-8 w-full h-112 lg:h-80 object-cover object-top"
-                      src="https://images.unsplash.com/photo-1615803795804-06a0c2a0030e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                      src="/assets/felipe.png"
                       alt=""
                     />
                     <div className="relative inline-block w-full mb-8 p-10 bg-gray-600 rounded-lg transition duration-200">
@@ -761,7 +726,7 @@ export default function Home() {
                       src="https://images.pexels.com/photos/6822288/pexels-photo-6822288.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
                       alt=""
                     />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-blue-500">
+                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
                       <p className="text-xl font-bold">30</p>
                       <p className="text-xs uppercase text-gray-300">Feb</p>
                     </div>
@@ -789,7 +754,7 @@ export default function Home() {
                       src="https://images.pexels.com/photos/5325768/pexels-photo-5325768.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
                       alt=""
                     />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-blue-500">
+                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
                       <p className="text-xl font-bold">29</p>
                       <p className="text-xs uppercase text-gray-300">Feb</p>
                     </div>
@@ -817,7 +782,7 @@ export default function Home() {
                       src="https://images.pexels.com/photos/5325708/pexels-photo-5325708.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940"
                       alt=""
                     />
-                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-blue-500">
+                    <div className="absolute bottom-0 left-0 ml-8 mb-6 px-3 pb-3 pt-1 inline-block bg-white rounded-b-2xl border-t-4 border-primary-500">
                       <p className="text-xl font-bold">25</p>
                       <p className="text-xs uppercase text-gray-300">Feb</p>
                     </div>
@@ -840,7 +805,7 @@ export default function Home() {
             </div>
             <div className="mt-14 lg:mt-24 text-center">
               <a
-                className="inline-block py-5 px-12 mr-4 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-bold transition duration-200"
+                className="inline-block py-5 px-12 mr-4 bg-primary-500 hover:bg-blue-600 rounded-full text-white font-bold transition duration-200"
                 href="#"
               >
                 See all

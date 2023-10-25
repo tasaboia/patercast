@@ -18,7 +18,9 @@ export default function Home() {
       </HelmetProvider>
       <>
         <section className="relative pb-20 bg-[#163425] overflow-hidden">
-          <nav className="relative py-8 px-4 xl:px-10 bg-[#163425]">
+          <nav className="relative py-8 px-4 xl:px-10 bg-[#163425] flex justify-between">
+            <img src="/assets/logo.png" alt="" width={150} height={30} />
+
             <div className="flex justify-between items-center">
               <a className="text-xl text-white font-semibold" href="#">
                 <img src="/images/Vision-white-1.svg" alt="" width={150} />
@@ -94,27 +96,27 @@ export default function Home() {
                     </div>
                     <div>
                       <h2 className="mb-8 text-4xl lg:text-6xl text-white font-bold">
-                        Creativity that sparks performance{" "}
+                        Um movimento para o resgate da paternidade
                       </h2>
                       <a
                         className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-[#E57926] hover:bg-[#D36918] transition duration-200"
                         href="#"
                       >
-                        Get estimate
+                        Spotify
                       </a>
                       <a
                         className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:border-gray-50 transition duration-200"
                         href="#"
                       >
-                        CONTACT
+                        youtube
                       </a>
                     </div>
                   </div>
                 </div>
                 <div className="hidden md:block absolute top-0 right-0 w-full md:w-1/2 mr-10 px-4">
                   <img
-                    className="w-full h-80 lg:h-128 object-cover"
-                    src={"/pawel-czerwinski-LSZE-N0hz3s-unsplash.jpg"}
+                    className="w-full h-80 lg:h-full object-cover"
+                    src={"/assets/hero.png"}
                     alt=""
                   />
                 </div>

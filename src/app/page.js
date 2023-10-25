@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion, useScroll } from "framer-motion";
+import PosdcastItem from "./_components/PodcastList";
 const meta = {
   title: "",
   meta: [],
@@ -12,32 +13,15 @@ const meta = {
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
+  const epList = [
+    "https://open.spotify.com/episode/6wKAdMbYr6ng26Bb22ODfB?si=b8cc1688ef104ec8",
+    "https://open.spotify.com/episode/2SR4REwn731Br6cJewXl4U?si=662aeed9253f4716",
+    "https://open.spotify.com/episode/2SR4REwn731Br6cJewXl4U?si=edb130b026944ede",
+    "https://open.spotify.com/episode/5jOXaPwEaLY77DOFH8cPIf?si=c20e1803791a4950",
+    "https://open.spotify.com/episode/4Z6pZd7qZ8ZnAx8UKNxYS9?si=47b73ed03c344f45",
+    "https://open.spotify.com/episode/4ZLDyvgoymfRhz4QF6o0Nu?si=6eee3d5a8dfe4eb0",
+  ];
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://open.spotify.com/embed/iframe-api/v1";
-
-    document.body.appendChild(script);
-    script.addEventListener("load", () => {
-      window.onSpotifyIframeApiReady = (IFrameAPI) => {
-        const element = document.getElementById("embed-iframe");
-        const options = {
-          width: "100%",
-          height: "160",
-          uri: "spotify:episode:6wKAdMbYr6ng26Bb22ODfB?si=a1ce1cf9ff4e4ebd",
-          // https://open.spotify.com/episode/6wKAdMbYr6ng26Bb22ODfB?si=a1ce1cf9ff4e4ebd
-        };
-        const callback = (EmbedController) => {
-          document.querySelectorAll(".episode").forEach((episode) => {
-            episode.addEventListener("click", () => {
-              EmbedController.loadUri(episode.dataset.spotifyId);
-            });
-          });
-        };
-        IFrameAPI.createController(element, options, callback);
-      };
-    });
-  }, []);
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -78,7 +62,7 @@ export default function Home() {
                   </svg>
                 </button>
               </div>
-              <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:w-auto lg:space-x-10">
+              {/* <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:w-auto lg:space-x-10">
                 <li></li>
                 <li>
                   <a
@@ -104,19 +88,19 @@ export default function Home() {
                     Testimonials
                   </a>
                 </li>
-              </ul>
+              </ul> */}
               <div className="hidden lg:block">
-                <a
+                {/* <a
                   className="inline-block px-8 text-white hover:text-blue-50 font-semibold"
                   href="#"
                 >
                   Get estimate
-                </a>
+                </a> */}
                 <a
                   className="inline-block py-3 px-8 text-sm text-white hover:text-blue-50 uppercase font-semibold border-2 border-white"
                   href="#"
                 >
-                  CONTACT
+                  Contato
                 </a>
               </div>
             </div>
@@ -143,13 +127,15 @@ export default function Home() {
 
                       <a
                         className="inline-block w-full md:w-auto mb-2 md:mb-0 py-5 px-8 mr-6 text-center text-sm font-bold uppercase bg-secondary-500 hover:bg-secondary-400 transition duration-200"
-                        href="#"
+                        href="https://open.spotify.com/show/7ztRCvPUb34pLYbTl5DiQo?si=523c0aa23dc548b5"
+                        target="_blank"
                       >
                         Spotify
                       </a>
                       <a
                         className="inline-block w-full md:w-auto py-5 px-8 text-center text-sm text-white font-bold uppercase border border-white hover:text-secondary-400  hover:bg-gray-50 hover:border-gray-50 transition duration-200"
-                        href="#"
+                        href="https://www.youtube.com/@PaterCast"
+                        target="_blank"
                       >
                         youtube
                       </a>
@@ -237,11 +223,23 @@ export default function Home() {
             </nav>
           </div>
         </section>
-        <section className="relative py-20 2xl:py-40 bg-darkCoolGray-500 overflow-hidden">
+        <section className="relative flex py-20 2xl:py-40  bg-darkCoolGray-500 overflow-hidden justify-center items-center ">
           <div className="absolute h-40 w-40 bg-primary-500 bottom-0 right-0 -mr-20 -mb-20 rounded-full" />
-          <div className="container px-4 mx-auto">
+
+          <div className="container flex   flex-col md:flex-col lg:flex-row w-full  ">
+            <div className="lg:px-10 py-10 lg:py-0 flex justify-center items-center lg:h-full ">
+              <iframe
+                width="650"
+                height="365"
+                src="https://www.youtube.com/embed/Qrw_B5OjH3E?si=BN-GSdT2eVKksJFT?autoplay=0&rel=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
             <motion.div
-              className="box"
+              className="   flex lg:items-center "
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -251,12 +249,12 @@ export default function Home() {
               }}
             >
               <div className="flex flex-wrap -mx-6 lg:-mx-8">
-                <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
+                <div className="w-full md:w-1/2 lg:w-1/3  px-6 lg:px-8 mb-20 lg:mb-0">
+                  <span className="flex mb-5 justify-center items-center lg:w-10 lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
-                      className="w-8 h-8"
-                      width={35}
-                      height={35}
+                      className="w-6 h-6"
+                      width={16}
+                      height={16}
                       viewBox="0 0 35 35"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -298,12 +296,12 @@ export default function Home() {
                     graphic.
                   </p>
                 </div>
-                <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-20 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
+                <div className="w-full md:w-1/2 lg:w-1/3 px-6 lg:px-8 mb-20 lg:mb-0">
+                  <span className="flex mb-5 justify-center items-center lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
-                      className="w-8 h-8"
-                      width={35}
-                      height={35}
+                      className="w-6 h-6"
+                      width={16}
+                      height={16}
                       viewBox="0 0 35 35"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -329,12 +327,12 @@ export default function Home() {
                     and visual mockups.
                   </p>
                 </div>
-                <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8 mb-10 lg:mb-0">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
+                <div className="w-full md:w-1/2 lg:w-1/3 px-6 lg:px-8 mb-10 lg:mb-0">
+                  <span className="flex mb-5 justify-center items-center lg:h-10 w-20 h-20 bg-secondary-500 rounded-lg">
                     <svg
-                      className="w-8 h-8"
-                      width={36}
-                      height={35}
+                      className="w-6 h-6"
+                      width={16}
+                      height={16}
                       viewBox="0 0 36 35"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -366,39 +364,6 @@ export default function Home() {
                   <p className="text-lg text-gray-200">
                     Lorem ipsum is placeholder text commonly used in the
                     graphic, print,
-                  </p>
-                </div>
-                <div className="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-8">
-                  <span className="flex mb-10 justify-center items-center w-20 h-20 bg-secondary-500 rounded-lg">
-                    <svg
-                      className="w-8 h-8"
-                      width={35}
-                      height={35}
-                      viewBox="0 0 35 35"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M24.0618 13.1249C24.0618 12.8935 23.952 12.6758 23.766 12.5384C23.5797 12.4009 23.3394 12.3599 23.1183 12.428L14.3682 15.1203C14.0623 15.2144 13.8535 15.4972 13.8535 15.8173V21.536C13.4245 21.2878 12.9264 21.1457 12.3952 21.1457C10.7844 21.1457 9.47852 22.4515 9.47852 24.0624C9.47852 25.6733 10.7844 26.9791 12.3952 26.9791C14.0044 26.9791 15.3092 25.6758 15.3118 24.0671V24.0624V16.3557L22.6035 14.1122V20.0777C22.1745 19.8294 21.6765 19.6874 21.1452 19.6874C19.5343 19.6874 18.2285 20.9932 18.2285 22.6041C18.2285 24.2149 19.5343 25.5207 21.1452 25.5207C22.7545 25.5207 24.0592 24.2174 24.0618 22.6087V22.6041V13.1249ZM22.6035 22.6041C22.6035 21.7986 21.9506 21.1457 21.1452 21.1457C20.3397 21.1457 19.6868 21.7986 19.6868 22.6041C19.6868 23.4095 20.3397 24.0624 21.1452 24.0624C21.9506 24.0624 22.6035 23.4095 22.6035 22.6041ZM12.3952 22.6041C11.5898 22.6041 10.9368 23.257 10.9368 24.0624C10.9368 24.8678 11.5898 25.5207 12.3952 25.5207C13.2006 25.5207 13.8535 24.8678 13.8535 24.0624C13.8535 23.257 13.2006 22.6041 12.3952 22.6041Z"
-                        fill="white"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M10.208 3.64577C8.19447 3.64577 6.56217 5.27807 6.56217 7.2916V8.0937C4.89804 8.43149 3.64551 9.90278 3.64551 11.6666V27.7083C3.64551 29.7218 5.27781 31.3541 7.29134 31.3541H27.708C29.7215 31.3541 31.3538 29.7218 31.3538 27.7083V11.6666C31.3538 9.90278 30.1013 8.43149 28.4372 8.0937V7.2916C28.4372 5.27807 26.8049 3.64577 24.7913 3.64577H10.208ZM26.9788 8.02077V7.2916C26.9788 6.08347 25.9994 5.1041 24.7913 5.1041H10.208C8.99988 5.1041 8.02051 6.08347 8.02051 7.2916V8.02077H26.9788ZM7.29134 9.4791C6.08321 9.4791 5.10384 10.4585 5.10384 11.6666V27.7083C5.10384 28.9163 6.08321 29.8958 7.29134 29.8958H27.708C28.9161 29.8958 29.8955 28.9163 29.8955 27.7083V11.6666C29.8955 10.4585 28.9161 9.4791 27.708 9.4791H7.29134Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                  <div className="pb-px mb-12 bg-gray-500" />
-                  <h3 className="mt-12 mb-8 text-lg font-bold font-heading text-white">
-                    Lorem Ipsum
-                  </h3>
-                  <p className="text-lg text-gray-200">
-                    Lorem ipsum is placeholder text commonly used in the
-                    graphic, print.
                   </p>
                 </div>
               </div>
@@ -522,72 +487,25 @@ export default function Home() {
                   Episódios
                 </button>
               </div>
-              <div id="embed-iframe"></div>
 
-              <div className="flex flex-wrap mb-12 lg:mb-16 -m-6">
-                <div className="w-full md:w-1/2 p-6">
-                  <div className="flex flex-wrap -m-6">
-                    <div className="w-full lg:w-1/2 p-6">
-                      <img
-                        className="w-full h-64 object-cover object-top"
-                        src="https://images.unsplash.com/photo-1618005198920-f0cb6201c115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="w-full lg:w-1/2 p-6">
-                      <img
-                        className="w-full h-64 object-cover"
-                        src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=959&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="w-full p-6">
-                      <img
-                        className="w-full h-112 object-cover"
-                        src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 p-6">
-                  <div className="flex flex-wrap -m-6">
-                    <div className="w-full p-6">
-                      <img
-                        className="w-full h-112 object-cover"
-                        src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="w-full lg:w-1/2 p-6">
-                      <img
-                        className="w-full h-64 object-cover"
-                        src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=959&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="w-full lg:w-1/2 p-6">
-                      <img
-                        className="w-full h-64 object-cover"
-                        src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-wrap justify-center items-center mb-12 lg:mb-16 -m-6">
+                {epList.map((uri, index) => (
+                  <PosdcastItem uri={uri} />
+                ))}
               </div>
               <div className="mt-20 text-center">
                 <a
+                  target="_blank"
                   className="inline-block py-4 px-12 text-white font-bold bg-primary-500 hover:bg-primary-600 rounded-full"
-                  href="#"
+                  href="https://open.spotify.com/show/7ztRCvPUb34pLYbTl5DiQo?si=5b5d74dc82764718"
                 >
-                  See all
+                  Ver todos
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="relative pt-20 pb-32 2xl:py-40 bg-secondary-700 overflow-hidden">
+        {/* <section className="relative pt-20 pb-32 2xl:py-40 bg-secondary-700 overflow-hidden">
           <div className="absolute bottom-0 inset-x-0 h-full bg-gradient-/zospace-1" />
           <div className="absolute bottom-0 inset-x-0 h-3/5 w-2full -ml-64 -mb-12 bg-gradient-/zospace-2 transform -rotate-6" />
           <div className="relative container px-3 mx-auto">
@@ -618,15 +536,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="py-20 2xl:py-40 bg-secondary-700">
-          <div className="container px-4 mx-auto">
+        </section> */}
+        <section className="py-20 2xl:py-14 bg-secondary-700">
+          <div className="container  mx-auto">
             <div className="max-w-5xl mx-auto">
               <h2 className="mb-24 text-center text-5xl font-bold font-heading text-white">
                 Our Team
               </h2>
               <div className="flex flex-wrap justify-center -mx-4 mb-20">
-                <div className="w-full lg:w-1/4 px-4">
+                {/* <div className="w-full lg:w-1/4 px-4">
                   <div>
                     <a
                       className="hidden lg:inline-block w-full p-10 bg-primary-500 hover:bg-primary-600 rounded-lg transition duration-200"
@@ -654,8 +572,8 @@ export default function Home() {
                         </svg>
                       </div>
                     </a>
-                  </div>
-                </div>
+                  </div> 
+                </div> */}
                 <div className="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
                   <div>
                     <img
@@ -674,10 +592,10 @@ export default function Home() {
                       }}
                     />
                     <h3 className="mb-2 text-3xl text-white font-bold font-heading">
-                      Maxi Svennson
+                      Antônio Garcia
                     </h3>
                     <p className="mb-4 text-lg text-white font-bold">
-                      Social Media Manager
+                      Co-Founder
                     </p>
                     <a className="flex justify-end" href="#">
                       <svg
@@ -712,7 +630,7 @@ export default function Home() {
                         }}
                       />
                       <h3 className="mb-2 text-3xl text-white font-bold font-heading">
-                        Oliver Haller
+                        Felipe Zapalá
                       </h3>
                       <p className="mb-4 text-lg text-white font-bold">
                         Co-Founder
@@ -735,14 +653,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="text-center">
-                <a
-                  className="inline-block py-4 px-12 border border-gray-200 hover:border-gray-50 rounded-full font-bold text-white"
-                  href="#"
-                >
-                  More
-                </a>
               </div>
             </div>
           </div>
@@ -858,7 +768,7 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-        <section className="py-20 2xl:py-40 bg-primary-500">
+        <section className="py-10 2xl:py-10 bg-primary-500">
           <div className="container mx-auto px-4 mb-12 md:mb-20">
             <div className="max-w-4xl mx-auto text-center">
               {/* <a
@@ -920,7 +830,8 @@ export default function Home() {
               <div className="flex justify-center">
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://www.youtube.com/@PaterCast"
+                  target="_blank"
                 >
                   <svg
                     width={20}
@@ -935,15 +846,16 @@ export default function Home() {
                     />
                   </svg>
                 </a>
-
+                {/* ---------------- instragram  */}
                 <a
                   className="flex justify-center items-center w-12 h-12 mr-4 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://www.instagram.com/patercast.br/"
+                  target="_blank"
                 >
                   <svg
                     className="h-4 w-4 text-white"
-                    width={18}
-                    height={18}
+                    width={24}
+                    height={24}
                     viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -964,20 +876,21 @@ export default function Home() {
                     </g>
                   </svg>
                 </a>
+                {/* ------------ twitter  */}
                 <a
                   className="flex justify-center items-center w-12 h-12 bg-gray-600 rounded-full"
-                  href="#"
+                  href="https://open.spotify.com/show/7ztRCvPUb34pLYbTl5DiQo?si=523c0aa23dc548b5"
+                  target="_blank"
                 >
                   <svg
-                    className="w-4 h-4 text-white"
-                    width={18}
-                    height={16}
-                    viewBox="0 0 18 16"
-                    fill="none"
+                    className="h-4 w-4 text-white"
+                    viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                   >
                     <path
-                      d="M18 2.41887C17.3306 2.7125 16.6174 2.90712 15.8737 3.00162C16.6388 2.54487 17.2226 1.82712 17.4971 0.962C16.7839 1.38725 15.9964 1.68763 15.1571 1.85525C14.4799 1.13413 13.5146 0.6875 12.4616 0.6875C10.4186 0.6875 8.77387 2.34575 8.77387 4.37863C8.77387 4.67113 8.79862 4.95237 8.85938 5.22012C5.7915 5.0705 3.07687 3.60013 1.25325 1.36025C0.934875 1.91263 0.748125 2.54488 0.748125 3.2255C0.748125 4.5035 1.40625 5.63637 2.38725 6.29225C1.79437 6.281 1.21275 6.10888 0.72 5.83775C0.72 5.849 0.72 5.86363 0.72 5.87825C0.72 7.6715 1.99912 9.161 3.6765 9.50412C3.37612 9.58625 3.04875 9.62562 2.709 9.62562C2.47275 9.62562 2.23425 9.61213 2.01038 9.56262C2.4885 11.024 3.84525 12.0984 5.4585 12.1332C4.203 13.1154 2.60888 13.7071 0.883125 13.7071C0.5805 13.7071 0.29025 13.6936 0 13.6565C1.63462 14.7106 3.57188 15.3125 5.661 15.3125C12.4515 15.3125 16.164 9.6875 16.164 4.81175C16.164 4.64862 16.1584 4.49113 16.1505 4.33475C16.8829 3.815 17.4982 3.16587 18 2.41887Z"
+                      d="M19.098 10.638c-3.868-2.297-10.248-2.508-13.941-1.387-.593.18-1.22-.155-1.399-.748-.18-.593.154-1.22.748-1.4 4.239-1.287 11.285-1.038 15.738 1.605.533.317.708 1.005.392 1.538-.316.533-1.005.709-1.538.392zm-.126 3.403c-.272.44-.847.578-1.287.308-3.225-1.982-8.142-2.557-11.958-1.399-.494.15-1.017-.129-1.167-.623-.149-.495.13-1.016.624-1.167 4.358-1.322 9.776-.682 13.48 1.595.44.27.578.847.308 1.286zm-1.469 3.267c-.215.354-.676.465-1.028.249-2.818-1.722-6.365-2.111-10.542-1.157-.402.092-.803-.16-.895-.562-.092-.403.159-.804.562-.896 4.571-1.045 8.492-.595 11.655 1.338.353.215.464.676.248 1.028zm-5.503-17.308c-6.627 0-12 5.373-12 12 0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12z"
                       fill="white"
                     />
                   </svg>

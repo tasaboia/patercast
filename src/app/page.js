@@ -54,7 +54,8 @@ export default function Home() {
                 um convite para:
               </span>
               <h2 className="mt-12 text-5xl lg:text-6xl text-white font-bold font-heading">
-                uma jornada na paternidade
+                {/* uma jornada na paternidade */}
+                Uma Jornada de Transformação
               </h2>
             </div>
             <div className="relative px-8 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-orange-500 rounded-xl overflow-hidden">
@@ -64,8 +65,8 @@ export default function Home() {
                 </h3> */}
                 <p className="text-xl text-gray-300">
                   Estamos aqui para construir uma comunidade que convide todos a
-                  explorar o significado da paternidade. Oferecemos conteúdo
-                  autêntico e inspirador para enriquecer essa jornada.
+                  explorar o significado da paternidade.
+                  {/* Oferecemos conteúdo autêntico e inspirador para enriquecer essa jornada. */}
                 </p>
               </div>
               <img
@@ -133,7 +134,7 @@ export default function Home() {
                       Compartilhar
                     </h3>
                     <p className="text-lg text-gray-200">
-                      Compartilhe essa experiencia com amigos e familiares,
+                      Compartilhe essa experiência com amigos e familiares,
                       contamos com você para construir essa comunidade.
                     </p>
                   </div>
@@ -158,14 +159,14 @@ export default function Home() {
                   podcast
                 </span>
                 <h2 className="mt-8 mb-16 text-5xl font-bold font-heading">
-                  um bom papo muda o mundo
+                  Um bom papo muda o mundo
                 </h2>
               </div>
-              <div className="lg:flex justify-center mb-16 mx-auto pb-6 border-b border-gray-50">
-                <div className="w-full md:w-auto px-8 py-4 text-lg font-bold shadow rounded-lg">
-                  Episódios
-                </div>
-              </div>
+              {/* <div className="lg:flex justify-center mb-16 mx-auto pb-6 border-b border-gray-50">
+                  <div className="w-full md:w-auto px-8 py-4 text-lg font-bold shadow rounded-lg"> 
+                Episódios
+                 </div>  
+              </div> */}
 
               <div className="flex flex-wrap justify-center items-center mb-12 lg:mb-16 -m-6">
                 {epList.map((uri, index) => (
@@ -241,7 +242,7 @@ export default function Home() {
                       }}
                     />
                     <h3 className="mb-2 text-3xl text-white font-bold font-heading">
-                      Antônio Garcia
+                      Antonio Garcia
                     </h3>
                     <p className="mb-4 text-lg text-white font-bold">
                       Co-Founder

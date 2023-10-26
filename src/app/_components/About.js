@@ -72,7 +72,7 @@ export default function About() {
               </span>
               <div className="pb-px mb-12 bg-gray-500" />
               <h3 className="mt-12 mb-8 text-sm font-bold font-heading text-white">
-                Abordagem interdisciplinar
+                Abordagem Interdisciplinar
               </h3>
               <p className="text-sm text-gray-200">
                 A abordagem interdisciplinar inclui literatura, arte,

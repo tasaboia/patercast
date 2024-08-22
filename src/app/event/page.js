@@ -5,26 +5,33 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Event() {
   return (
     <div className="pt-10 bg-[#f5f5f5]">
-      <div className="px-8 pt-20 pb-10 bg-[#f5f5f5]">
-        <div className="md:max-w-2xl text-center mx-auto">
-          <span className="inline-block mb-3 text-sm text-primary-500 font-bold uppercase tracking-widest">
-            Estamos muito felizes de ter por aqui.
-          </span>
-          <h1 className="font-heading mb-6 text-5xl lg:text-6xl text-orange-500 font-black tracking-tight">
-            Todo homem tem uma jornada a viver
-          </h1>
-          <p className="mb-8 text-xl font-bold">
-            Nós queremos que você viva de forma sábia, relevante e saudável!
-            Antes de entrar no nosso grupo, pedimos que preencha esse rápido
-          </p>
-          <div className="flex flex-wrap justify-center mb-20 -m-2">
-            <div className="w-full md:w-auto p-2">
-              <Link
-                className="block w-full px-8 py-3.5 text-lg text-center text-white font-bold bg-primary-500 hover:bg-orange-500 focus:ring-4 focus:ring-blue-200 rounded-full"
-                href="#grupo-vip"
+      <div className=" overflow-hidden  ">
+        <div className="container mx-auto px-4">
+          <div className="pt-16 pb-8 px-8 text-center bg-primary-200 rounded-3xl">
+            <div className="md:max-w-2xl text-center mx-auto">
+              <span
+                className="inline-block mb-3 text-sm text-gray-800
+               font-bold uppercase tracking-widest"
               >
-                Iniciar
-              </Link>
+                Estamos muito felizes de ter por aqui.
+              </span>
+              <h1 className="font-heading mb-6 text-5xl lg:text-6xl text-gray-200 font-black tracking-tight">
+                Todo homem tem uma jornada a viver
+              </h1>
+              <p className="mb-8 text-xl font-bold text-gray-800">
+                Nós queremos que você viva de forma sábia, relevante e saudável!
+                Antes de entrar no nosso grupo, pedimos que preencha esse rápido
+              </p>
+              <div className="flex flex-wrap justify-center mb-20 -m-2">
+                <div className="w-full md:w-auto p-2">
+                  <Link
+                    className="block w-full px-8 py-3.5 text-lg text-center text-white font-bold bg-orange-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-200 rounded-full"
+                    href="#grupo-vip"
+                  >
+                    Iniciar
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

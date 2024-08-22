@@ -1,10 +1,8 @@
 import React from "react";
-import NavBar from "./NavBar";
 
 export default function Hero() {
   return (
     <section className="relative pb-20 bg-primary-500 overflow-hidden">
-      <NavBar />
       <div className="relative pt-12 md:pt-0">
         <div className="container px-4 mx-auto">
           <div className="relative flex flex-wrap items-center -mx-4">

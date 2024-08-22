@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion, useScroll } from "framer-motion";
 import PosdcastItem from "./_components/PodcastList";
@@ -30,7 +30,7 @@ export default function Home() {
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
-      <div className=" w-full overflow-x-hidden">
+      <div className=" w-full overflow-x-hidden pt-8 bg-primary-500">
         {" "}
         <motion.div
           className="fixed top-0 left-0 right-0 h-2 bg-secondary-500  w-[100vw]"

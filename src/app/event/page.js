@@ -9,13 +9,13 @@ export default function Event() {
         <div className="container mx-auto px-4">
           <div className="pt-16 pb-8 px-8 text-center bg-[#27523C] rounded-3xl">
             <div className="md:max-w-2xl text-center mx-auto">
-              <span className="inline-block mb-3 text-sm text-[#ffe6c0] font-bold uppercase tracking-widest">
+              <span className="inline-block mb-3  text-sm text-[#ffe6c0] font-bold uppercase tracking-widest">
                 Estamos muito felizes de ter por aqui.
               </span>
-              <h1 className="font-heading mb-6 text-5xl lg:text-6xl text-white font-black tracking-tight">
+              <h1 className="font-heading mb-6 text-4xl md:text-5xl lg:text-6xl text-white font-black tracking-tight">
                 Todo homem tem uma jornada a viver
               </h1>
-              <p className="mb-8 text-xl font-bold text-white">
+              <p className="mb-8 text-sm lg:text-xl font-bold text-white">
                 Nós queremos que você viva de forma sábia, relevante e saudável!
                 Antes de entrar no nosso grupo, pedimos que preencha esse rápido
               </p>

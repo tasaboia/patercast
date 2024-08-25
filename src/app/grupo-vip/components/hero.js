@@ -20,7 +20,7 @@ export default function Hero() {
 
             <a
               href="#form"
-              class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-white hover:bg-white hover:text-black rounded-full transition duration-200"
+              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-white hover:bg-white hover:text-black rounded-full transition duration-200"
             >
               Quero ser um bom pai!
             </a>

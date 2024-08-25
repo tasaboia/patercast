@@ -3,20 +3,20 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="pt-20 bg-gradient-radial from-[#122E20] via-[#224835] to-[#367053]">
-      <div class="relative pt-18">
+      <div className="relative pt-18">
         <img
-          class="hidden md:block absolute top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto"
+          className="hidden md:block absolute top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto"
           src="assets/flow-assets/headers/header-4-left-top.png"
           alt=""
         />
         <img
-          class="hidden md:block absolute top-0 right-0 mt-20 w-32 lg:w-64 xl:w-auto"
+          className="hidden md:block absolute top-0 right-0 mt-20 w-32 lg:w-64 xl:w-auto"
           src="assets/flow-assets/headers/header-4-right-top.png"
           alt=""
         />
-        <div class="container mx-auto px-4 relative">
-          <div class="max-w-lg xl:max-w-xl mx-auto mb-12 lg:mb-0 text-center">
-            <div class="flex mb-6 items-center justify-center">
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-lg xl:max-w-xl mx-auto mb-12 lg:mb-0 text-center">
+            <div className="flex mb-6 items-center justify-center">
               <svg
                 width="13"
                 height="12"
@@ -32,62 +32,62 @@ export default function Hero() {
                   fill="#BEF264"
                 ></rect>
               </svg>
-              <span class="ml-2 text-sm font-medium text-white">
+              <span className="ml-2 text-sm font-medium text-white">
                 Powering Tomorrow
               </span>
             </div>
-            <h1 class="font-heading text-5xl xs:text-7xl xl:text-8xl tracking-tight text-white mb-8">
+            <h1 className="font-heading text-5xl xs:text-7xl xl:text-8xl tracking-tight text-white mb-8">
               Paternidade Transformada
             </h1>
-            <p class="text-lg text-white mb-10">
+            <p className="text-lg text-white mb-10">
               A paternidade não é algo simples: trata-se de uma jornada intensa
               e bela. A realidade é de que existem muitos homens com filhos, mas
               que não aprenderam a serem pais. E ser um pai presente e saudável
               é algo complexo, e nós queremos te ajudar.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center">
+            <div className="flex flex-col sm:flex-row justify-center">
               <a
                 href="#"
-                class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-black border border-white hover:bg-white rounded-full transition duration-200"
+                className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-black border border-white hover:bg-white rounded-full transition duration-200"
               >
                 Quero ser um bom pai!
               </a>
             </div>
           </div>
-          <div class="flex -mx-4 items-end relative">
-            <div class="w-1/3 xs:w-1/2 lg:w-auto px-4">
+          <div className="flex -mx-4 items-end relative">
+            <div className="w-1/3 xs:w-1/2 lg:w-auto px-4">
               <img
-                class="block h-32 lg:h-48"
+                className="block h-32 lg:h-48"
                 src="assets/flow-assets/headers/header-4-bottom-lleft.png"
                 alt=""
               />
             </div>
-            <div class="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
+            <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
               <img
-                class="block w-1/2 md:w-64 lg:w-auto ml-auto"
+                className="block w-1/2 md:w-64 lg:w-auto ml-auto"
                 src="assets/flow-assets/headers/header-4-bottom-right.png"
                 alt=""
               />
             </div>
-            <div class="absolute bottom-0 left-0 w-full py-32 bg-gradient-to-t from-teal-900 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full py-32 bg-gradient-to-t from-teal-900 to-transparent"></div>
           </div>
         </div>
       </div>
-      <div class="hidden fixed top-0 left-0 bottom-0 w-full xs:w-5/6 xs:max-w-md z-50">
-        <div class="fixed inset-0 bg-violet-900 opacity-20"></div>
-        <nav class="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
-          <div class="flex items-center justify-between">
-            <a href="#" class="inline-block">
+      <div className="hidden fixed top-0 left-0 bottom-0 w-full xs:w-5/6 xs:max-w-md z-50">
+        <div className="fixed inset-0 bg-violet-900 opacity-20"></div>
+        <nav className="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
+          <div className="flex items-center justify-between">
+            <a href="#" className="inline-block">
               <img
-                class="h-8"
+                className="h-8"
                 src="assets/flow-assets/logos/sign-logo-flow.svg"
                 alt=""
               />
             </a>
-            <div class="flex items-center">
+            <div className="flex items-center">
               <a
                 href="#"
-                class="inline-flex py-2.5 px-4 mr-6 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
+                className="inline-flex py-2.5 px-4 mr-6 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
               >
                 Login
               </a>
@@ -110,27 +110,27 @@ export default function Hero() {
               </button>
             </div>
           </div>
-          <div class="pt-20 pb-12 mb-auto">
-            <ul class="flex-col">
-              <li class="mb-6">
+          <div className="pt-20 pb-12 mb-auto">
+            <ul className="flex-col">
+              <li className="mb-6">
                 <a
-                  class="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                   href="#"
                 >
                   About us
                 </a>
               </li>
-              <li class="mb-6">
+              <li className="mb-6">
                 <a
-                  class="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                   href="#"
                 >
                   Team
                 </a>
               </li>
-              <li class="mb-6">
+              <li className="mb-6">
                 <a
-                  class="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                   href="#"
                 >
                   Solutions
@@ -138,7 +138,7 @@ export default function Hero() {
               </li>
               <li>
                 <a
-                  class="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                   href="#"
                 >
                   Blog
@@ -146,10 +146,10 @@ export default function Hero() {
               </li>
             </ul>
           </div>
-          <div class="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <a
               href="#"
-              class="inline-flex items-center text-lg font-medium text-teal-900"
+              className="inline-flex items-center text-lg font-medium text-teal-900"
             >
               <span>
                 <svg
@@ -175,10 +175,10 @@ export default function Hero() {
                   ></path>
                 </svg>
               </span>
-              <span class="ml-2">Newsletter</span>
+              <span className="ml-2">Newsletter</span>
             </a>
-            <div class="flex items-center">
-              <a href="#" class="inline-block mr-4">
+            <div className="flex items-center">
+              <a href="#" className="inline-block mr-4">
                 <svg
                   width="20"
                   height="20"
@@ -194,7 +194,7 @@ export default function Hero() {
                   </g>
                 </svg>
               </a>
-              <a href="#" class="inline-block mr-4">
+              <a href="#" className="inline-block mr-4">
                 <svg
                   width="24"
                   height="24"
@@ -208,7 +208,7 @@ export default function Hero() {
                   ></path>
                 </svg>
               </a>
-              <a href="#" class="inline-block">
+              <a href="#" className="inline-block">
                 <svg
                   width="24"
                   height="24"

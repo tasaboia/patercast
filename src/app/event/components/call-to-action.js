@@ -23,7 +23,8 @@ export default function CallToAction() {
             decisão certa antes que seja tarde demais!
           </p>
           <a
-            href="#"
+            href="https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs"
+            target="_blank"
             class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white bg-orange-500 hover:bg-yellow-700 rounded-full transition duration-200"
           >
             Eu estarei lá!

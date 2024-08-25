@@ -9,15 +9,18 @@ export default function Hero() {
             <h1 className="font-heading text-white mb-4 text-6xl md:text-7xl tracking-tighter">
               Paternidade Transformada
             </h1>
-            <p className="mb-10 max-w-md mx-auto text-white">
-              A realidade é de que existem muitos homens com filhos, mas que não
-              aprenderam a serem pais. E ser um pai presente e saudável é algo
-              complexo, e nós queremos te ajudar.
+            <p className="mb-10 max-w-md lg:max-w-2xl mx-auto text-white">
+              A paternidade não é algo simples: trata-se de uma jornada intensa
+              e bela.
+              <br />
+              <br />A realidade é de que existem muitos homens com filhos, mas
+              que não aprenderam a serem pais. E ser um pai presente e saudável
+              é algo complexo, e nós queremos te ajudar.
             </p>
 
             <a
               href="#form"
-              class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-black border border-white hover:bg-white rounded-full transition duration-200"
+              class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-white hover:bg-white hover:text-black rounded-full transition duration-200"
             >
               Quero ser um bom pai!
             </a>

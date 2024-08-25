@@ -41,15 +41,10 @@ export default function ContactForm() {
     }
   };
   const issuesOptions = [
-    "Estresse Financeiro",
-    "Emocionais e de Bem-Estar",
-    "Educacional",
-    "Equilíbrio entre Trabalho e Tempo com Família",
-    "Disciplina e Comportamento dos Filhos",
-    "Tecnologia no Dia a Dia das Crianças",
-    "Saúde e Nutrição",
-    "Criar Independência",
-    "Diferença entre Estilos de Educação",
+    "Medo do fracasso",
+    "Não saber gerir o dinheiro e os recursos",
+    "Ausência paterna em minha própria vida",
+    "Não me sinto pronto para ser um bom pai",
   ];
 
   const handleSubmit = async (e) => {
@@ -123,7 +118,7 @@ export default function ContactForm() {
                     className="block mb-2 text-sm text-gray-500 font-bold"
                     htmlFor="name"
                   >
-                    Nome
+                    Seu nome:
                   </label>
                   <input
                     className="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-white placeholder-gray-500 outline-none focus:ring-4 focus:ring-blue-200 rounded-full"
@@ -141,7 +136,7 @@ export default function ContactForm() {
                     className="block mb-2 text-sm text-gray-500 font-bold"
                     htmlFor="phone"
                   >
-                    Celular
+                    Seu número de telefone (DDD + número):
                   </label>
                   <input
                     className="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-white placeholder-gray-500 outline-none focus:ring-4 focus:ring-blue-200 rounded-full"
@@ -161,7 +156,7 @@ export default function ContactForm() {
                     className="block mb-2 text-sm text-gray-500 font-bold"
                     htmlFor="email"
                   >
-                    E-mail
+                    Seu melhor e-mail:
                   </label>
                   <input
                     className="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-white placeholder-gray-500 outline-none focus:ring-4 focus:ring-blue-200 rounded-full"
@@ -180,8 +175,8 @@ export default function ContactForm() {
                     className="block mb-2 text-sm text-gray-500 font-bold"
                     htmlFor="issues"
                   >
-                    Quais são os maiores desafios que você encontrou na criação
-                    de seus filhos até hoje?
+                    Para você, quais são as maiores dores envolvendo o tema
+                    da paternidade?
                   </label>
                   <div className="flex flex-col space-y-3 pt-3">
                     {issuesOptions.map((option, index) => (
@@ -204,11 +199,11 @@ export default function ContactForm() {
                   </div>
                 </div>
               </div>
-              <div className="w-full p-3.5">
+              <div className="w-full p-3.5 ">
                 <div className="flex flex-wrap items-center -m-2 md:justify-end">
                   <div className="w-full md:w-1/2 p-2 ">
                     <div className="flex flex-wrap md:justify-end -m-2">
-                      <div className="w-full md:w-auto p-2 flex gap-3 flex-col">
+                      <div className="w-full md:w-auto p-2 flex gap-3 flex-col pt-4">
                         {show ? (
                           <a
                             href="https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs"
@@ -235,11 +230,7 @@ export default function ContactForm() {
                 </div>
               </div>
             </form>
-            {success && (
-              <p className="text-green-500 font-bold mt-4">
-                Mensagem enviada com sucesso!
-              </p>
-            )}
+
             {error && (
               <p className="text-red-500 font-bold mt-4">
                 Ocorreu um erro ao enviar a mensagem.

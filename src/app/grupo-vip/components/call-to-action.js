@@ -14,7 +14,7 @@ export default function CallToAction() {
       </div>
       <div class="container mx-auto lg:pl-20 px-8 relative">
         <div class="max-w-md lg:max-w-none lg:w-2/5 mx-auto lg:mx-0">
-          <h1 class="font-heading text-5xl sm:text-6xl tracking-sm mb-6">
+          <h1 class="font-heading text-5xl sm:text-6xl text-gray-800 tracking-sm mb-6">
             Participe do nosso encontro online!
           </h1>
           <p class="text-lg text-gray-700 mb-10">

@@ -101,7 +101,7 @@ export default function ContactForm() {
   return (
     <section id="form" className="py-10 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="py-16 px-8 bg-white overflow-hidden rounded-3xl">
+        <div className="py-16  bg-white overflow-hidden rounded-3xl">
           <div className="max-w-5xl mx-auto">
             <div className="mb-10 md:max-w-2xl mx-auto text-center">
               <h2 className="font-heading mb-6 text-4xl md:text-5xl lg:text-6xl text-gray-900 font-black tracking-tight">
@@ -226,7 +226,7 @@ export default function ContactForm() {
                             className="block w-full px-8 md:px-16 py-3.5 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full"
                             disabled={loading}
                           >
-                            {loading ? "Enviando..." : "Enviar"}
+                            {loading ? "Enviando..." : "Enviar Mensagem"}
                           </button>
                         )}
                       </div>

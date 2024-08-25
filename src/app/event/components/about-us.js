@@ -19,11 +19,10 @@ export default function AboutUs() {
                 </p>
                 <div className="md:max-w-max">
                   <a
-                    href="https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs"
-                    target="_blank"
-                    className="py-4 px-7 w-full font-semibold rounded-xl shadow-6xl focus:ring focus:ring-gray-300 bg-white hover:bg-gray-100 transition ease-in-out duration-200"
+                    href="#form"
+                    className="py-4 px-7 w-full font-semibold rounded-xl shadow-6xl focus:ring focus:ring-gray-300 bg-white text-black hover:bg-gray-100 transition ease-in-out duration-200"
                   >
-                    Quero fazer parte deste movimento!
+                    Quero fazer parte!
                   </a>
                 </div>
               </div>

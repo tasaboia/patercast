@@ -37,7 +37,7 @@ export async function POST(req) {
       range: "leads!A:E",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[id, body.name, body.phone, body.email, body.issue]],
+        values: [[id, body.name, body.phone, body.email, body.issues]],
       },
     });
 

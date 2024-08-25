@@ -14,6 +14,7 @@ export default function Event() {
       <Hero />
       <AboutUs />
       {/* <Zoom /> */}
+      <ContactForm />
       <CallToAction />
       {/* <Footer /> */}
     </div>

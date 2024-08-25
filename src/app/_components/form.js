@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -10,8 +10,12 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [issues, setIssues] = useState([]); // Certifique-se de que `issues` está definido aqui
+  const [issues, setIssues] = useState([]);
+  const [show, setShow] = useState(false);
 
+  useEffect(() => {
+    console.log(issues);
+  }, [issues]);
   const handleChange = (e) => {
     switch (e.target.name) {
       case "name":
@@ -23,14 +27,19 @@ export default function ContactForm() {
       case "phone":
         setPhone(e.target.value);
         break;
-      case "issue":
-        setIssue(e.target.value);
+      case "issues":
+        const issue = e.target.value;
+        const isChecked = e.target.checked;
+        if (isChecked) {
+          setIssues([...issues, issue]);
+        } else {
+          setIssues(issues.filter((i) => i !== issue));
+        }
         break;
       default:
         break;
     }
   };
-
   const issuesOptions = [
     "Estresse Financeiro",
     "Emocionais e de Bem-Estar",
@@ -53,7 +62,7 @@ export default function ContactForm() {
       name,
       email,
       phone,
-      issue,
+      issues: issues.join(", "),
     };
 
     try {
@@ -66,13 +75,17 @@ export default function ContactForm() {
 
       const content = await response.data;
 
-      console.log(content);
       if (response.status === 201) {
         setSuccess(true);
         setName("");
         setEmail("");
         setPhone("");
-        setIssue("");
+        setIssues("");
+        setShow(true);
+        window.open(
+          "https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs",
+          "_blank"
+        );
       } else {
         throw new Error(content.message || "Erro ao enviar dados");
       }
@@ -86,20 +99,18 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-10 bg-gray-50 overflow-hidden">
+    <section id="form" className="py-10 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="py-16 px-8 bg-white overflow-hidden rounded-3xl">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-10 md:max-w-md mx-auto text-center">
-              <span className="inline-block mb-4 text-sm text-blue-500 font-bold uppercase tracking-widest">
-                Contact Us
-              </span>
+            <div className="mb-10 md:max-w-2xl mx-auto text-center">
               <h2 className="font-heading mb-6 text-4xl md:text-5xl lg:text-6xl text-gray-900 font-black tracking-tight">
-                Get connected
+                Participe do nosso encontro online!
               </h2>
               <p className="text-gray-500 font-bold">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Malesuada tellus vestibulum, commodo pulvinar.
+                Estamos criando uma comunidade de homens que se ajudam, aprendem
+                sobre paternidade e têm lares saudáveis. Não fique de fora. Tome
+                a decisão certa antes que seja tarde demais!
               </p>
             </div>
             <form
@@ -172,7 +183,7 @@ export default function ContactForm() {
                     Quais são os maiores desafios que você encontrou na criação
                     de seus filhos até hoje?
                   </label>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-3 pt-3">
                     {issuesOptions.map((option, index) => (
                       <label key={index} className="inline-flex items-center">
                         <input
@@ -182,7 +193,12 @@ export default function ContactForm() {
                           checked={issues.includes(option)}
                           onChange={handleChange}
                         />
-                        <span className="ml-2 text-gray-700">{option}</span>
+                        <span
+                          className="ml-2 text-gray-500
+                       text-sm font-bold "
+                        >
+                          {option}
+                        </span>
                       </label>
                     ))}
                   </div>
@@ -192,14 +208,27 @@ export default function ContactForm() {
                 <div className="flex flex-wrap items-center -m-2 md:justify-end">
                   <div className="w-full md:w-1/2 p-2 ">
                     <div className="flex flex-wrap md:justify-end -m-2">
-                      <div className="w-full md:w-auto p-2">
-                        <button
-                          type="submit"
-                          className="block w-full px-8 md:px-16 py-3.5 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full"
-                          disabled={loading}
-                        >
-                          {loading ? "Enviando..." : "Enviar Mensagem"}
-                        </button>
+                      <div className="w-full md:w-auto p-2 flex gap-3 flex-col">
+                        {show ? (
+                          <a
+                            href="https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs"
+                            target="_blank"
+                            rel="noopener noreferrer" // Adiciona segurança ao abrir o link em nova aba
+                            className="inline-flex w-full  py-4 px-6 items-center justify-center text-lg font-medium text-white bg-green-800 hover:bg-green-700 rounded-full transition duration-200"
+                          >
+                            <FaWhatsapp className="mr-2" />{" "}
+                            {/* Ícone do WhatsApp */}
+                            Entrar no grupo
+                          </a>
+                        ) : (
+                          <button
+                            type="submit"
+                            className="block w-full px-8 md:px-16 py-3.5 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full"
+                            disabled={loading}
+                          >
+                            {loading ? "Enviando..." : "Enviar"}
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>

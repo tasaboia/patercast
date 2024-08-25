@@ -16,8 +16,7 @@ export default function Hero() {
             </p>
 
             <a
-              href="https://chat.whatsapp.com/DOsLRK7QNvF2L3zJqTFDXs"
-              target="_blank"
+              href="#form"
               class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-black border border-white hover:bg-white rounded-full transition duration-200"
             >
               Quero ser um bom pai!

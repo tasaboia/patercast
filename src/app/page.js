@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
+      <NavBar />
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>

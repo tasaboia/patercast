@@ -6,10 +6,10 @@ export default function Hero() {
       <div className="pt-20 pb-28   overflow-hidden">
         <div className="container px-4 mx-auto">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="font-heading text-white mb-4 text-6xl md:text-7xl tracking-tighter">
+            <h1 className="font-heading font-dm text-white mb-4 text-6xl md:text-7xl tracking-tighter">
               Paternidade Transformada
             </h1>
-            <p className="mb-10 max-w-md lg:max-w-2xl mx-auto text-white">
+            <p className="mb-10 max-w-md font-soro lg:max-w-2xl mx-auto text-white">
               A paternidade não é algo simples: trata-se de uma jornada intensa
               e bela.
               <br />
@@ -20,7 +20,7 @@ export default function Hero() {
 
             <a
               href="#form"
-              class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-white hover:bg-white hover:text-black rounded-full transition duration-200"
+              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-white font-soro hover:bg-white hover:text-black rounded-full transition duration-200"
             >
               Quero ser um bom pai!
             </a>
@@ -38,14 +38,17 @@ export default function Hero() {
                   <div className="flex flex-wrap items-center justify-between">
                     <div className="w-auto mx-auto">
                       <div className="relative py-8 w-56 text-center">
-                        <h2 className="mb-3 pt-4 lg:pt-0 text-2xl lg:text-4xl font-semibold text-white tracking-tighter">
-                          31 / 08
-                          <span className="text-xl"> às 09:00h</span>
+                        <h2 className="mb-3 pt-4 lg:pt-0 text-2xl lg:text-4xl font-semibold text-white tracking-tighter font-dm">
+                          31/08{" "}
+                          <span className="text-xl font-soro font-heading font-light ">
+                            {" "}
+                            às 09:00h
+                          </span>
                         </h2>
                         {/* <h3 className="mb-3 text-   xl font-semibold text-white">
                           nós do Patercast queremos ajudar você nesta jornada.
                         </h3> */}
-                        <p className="text-white font-medium">
+                        <p className="text-white font-medium font-soro">
                           Será um encontro 100% gratuito e online
                         </p>
                       </div>

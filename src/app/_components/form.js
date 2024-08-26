@@ -176,7 +176,7 @@ export default function ContactForm() {
                     htmlFor="issues"
                   >
                     Para você, quais são as maiores dores envolvendo o tema
-                    da paternidade?
+                    da paternidade?git a
                   </label>
                   <div className="flex flex-col space-y-3 pt-3">
                     {issuesOptions.map((option, index) => (

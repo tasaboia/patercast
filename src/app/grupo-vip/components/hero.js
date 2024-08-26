@@ -6,6 +6,27 @@ export default function Hero() {
       <div className="pt-20 pb-28   overflow-hidden">
         <div className="container px-4 mx-auto">
           <div className="max-w-2xl mx-auto text-center">
+            {/* <p class="mb-3 text-sm  text-yellow-400 font-bold uppercase tracking-px"></p> */}
+            <div class="flex mb-6 items-center justify-center">
+              <svg
+                width="13"
+                height="12"
+                viewbox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  width="12"
+                  height="12"
+                  rx="2"
+                  fill="#BEF264"
+                ></rect>
+              </svg>
+              <span class="ml-2 text-sm font-medium text-white">
+                Masterclass
+              </span>
+            </div>
             <h1 className="font-heading font-dm text-white mb-4 text-6xl md:text-7xl tracking-tighter">
               Paternidade Transformada
             </h1>

@@ -37,7 +37,7 @@ export default function Product() {
             >
               {/* Card 1 */}
               <motion.div
-                className="flex py-4 flex-col justify-center items-center text-center max-w-80"
+                className="flex py-4 flex-col justify-center items-center text-center max-w-xs"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -60,7 +60,7 @@ export default function Product() {
 
               {/* Card 2 */}
               <motion.div
-                className="flex py-4 flex-col justify-center items-center text-center max-w-80"
+                className="flex py-4 flex-col justify-center items-center text-center max-w-xs"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -83,7 +83,7 @@ export default function Product() {
 
               {/* Card 3 */}
               <motion.div
-                className="flex py-4 flex-col justify-center items-center text-center max-w-80"
+                className="flex py-4 flex-col justify-center items-center text-center max-w-xs"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -115,7 +115,7 @@ export default function Product() {
             >
               {/* Card 4 */}
               <motion.div
-                className="flex py-4 flex-col justify-center items-center text-center max-w-80"
+                className="flex py-4 flex-col justify-center items-center text-center max-w-xs"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -139,7 +139,7 @@ export default function Product() {
 
               {/* Card 5 */}
               <motion.div
-                className="flex py-4 flex-col justify-center items-center text-center max-w-80"
+                className="flex py-4 flex-col justify-center items-center text-center max-w-xs"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}

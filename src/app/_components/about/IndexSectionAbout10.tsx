@@ -68,7 +68,7 @@ export default function About() {
               }
               transition={{ duration: 1 }}
             >
-              <h2 className="mb-6 text-6xl md:text-8xl text-white tracking-tighter">
+              <h2 className="mb-6 font-ebGaramond text-6xl md:text-8xl text-white tracking-tighter">
                 Por que criamos esta comunidade?
               </h2>
               <motion.p

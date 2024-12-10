@@ -45,7 +45,7 @@ export default function Hero() {
             quality={100}
             className="w-full h-auto lg:h-full object-contain lg:object-cover animate-fade-in delay-700"
           />
-          {/* <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 via-transparent to-transparent rounded-full blur-3xl"></div> */}
+          <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 via-transparent to-transparent rounded-full blur-3xl"></div>
         </div>
       </div>
     </section>

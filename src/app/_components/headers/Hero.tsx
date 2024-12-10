@@ -27,15 +27,15 @@ export default function Hero() {
       </div>
 
       <div className="relative w-full lg:w-3/5 flex justify-center items-center">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0d5838] via-white/10 to-transparent rounded-full blur-3xl  "></div>
-        <Image
+        {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0d583777] via-white/10 to-transparent rounded-full blur-3xl  "></div> */}
+        {/* <Image
           src="https://static.shuffle.dev/components/preview/697340ff-5445-426e-84bf-57e856b9afbf/assets/public/nightsable-assets/images/headers/lines.svg"
           alt="Hero Image 1"
           width={1680}
           height={1260}
           quality={100}
           className="absolute w-full h-auto object-contain z-10 top-0 left-0 md:top-20 md:left-20 lg:top-0 lg:left-40 animate-slide-in delay-500"
-        />
+        /> */}
         <div className="relative w-full h-full z-20">
           <Image
             src="/images/bg-hero.png"

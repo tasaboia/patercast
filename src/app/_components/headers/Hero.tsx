@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-wrap overflow-hidden animated-background min-h-screen bg-gradient-to-r from-primary-600 ">
+    <section className="relative flex flex-wrap overflow-hidden animated-background min-h-screen bg-gradient-to-t from-primary-600 ">
       <div className="lg:h-screen px-8 lg:w-[40%] w-full lg:pl-32 pt-10 lg:pt-0">
         <div className="h-full gap-6 w-full justify-center flex flex-col">
           <h1 className="font-ebGaramond font-bold max-w-xs text-5xl sm:text-5xl lg:text-7xl xl:text-8xl text-white tracking-tighter animate-fade-down delay-200">
@@ -45,7 +45,7 @@ export default function Hero() {
             quality={100}
             className="w-full h-auto lg:h-full object-contain lg:object-cover animate-fade-in delay-700"
           />
-          <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 via-transparent to-transparent rounded-full blur-3xl"></div>
+          {/* <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 via-transparent to-transparent rounded-full blur-3xl"></div> */}
         </div>
       </div>
     </section>

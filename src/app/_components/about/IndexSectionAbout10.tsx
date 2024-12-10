@@ -33,7 +33,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-8 overflow-hidden bg-primary-500">
+    <section ref={sectionRef} className="py-8 overflow-hidden bg-primary-600">
       <div className="container p-8 lg:p-0 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

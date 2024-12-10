@@ -49,7 +49,7 @@ export default function CTA() {
   return (
     <section
       ref={sectionRef}
-      className="pt-20 pb-24 md:pb-32 overflow-hidden bg-primary-600 bg-[url('/images/background-child.png')] bg-no-repeat bg-bottom bg-cover"
+      className="pt-20 pb-24 md:pb-32 overflow-hidden bg-primary-500 bg-[url('/images/background-child.png')] bg-no-repeat bg-bottom bg-cover"
     >
       <div className="container px-4 mx-auto">
         <div className="max-w-5xl mx-auto">

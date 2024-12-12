@@ -36,16 +36,16 @@ export default function Hero() {
           quality={100}
           className="absolute w-full h-auto object-contain z-10 top-0 left-0 md:top-20 md:left-20 lg:top-0 lg:left-40 animate-slide-in delay-500"
         /> */}
-        <div className="relative w-full h-full z-20">
+        <div className="flex justify-center items-center w-full h-full z-20">
           <Image
-            src="/images/bg-hero.png"
+            src="/images/bg-hero-2024.png"
             alt="Hero Image 2"
-            width={1680}
-            height={1260}
+            width={930}
+            height={829}
             quality={100}
-            className="w-full h-auto lg:h-full object-contain lg:object-cover animate-fade-in delay-700"
+            className="w-[80%] h-auto object-contain lg:object-cover animate-fade-in delay-700"
           />
-          <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 via-transparent to-transparent rounded-full blur-3xl"></div>
+          {/* <div className="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-gray-800 opacity-70 via-transparent to-transparent rounded-full blur-3xl"></div> */}
         </div>
       </div>
     </section>
